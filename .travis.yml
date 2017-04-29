@@ -1,0 +1,4 @@
+language: javascript
+install:
+  - npm install
+script: ./build.sh

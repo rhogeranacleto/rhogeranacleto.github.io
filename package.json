@@ -1,0 +1,15 @@
+{
+	"name": "rhogeranacleto",
+	"version": "1.0.0",
+	"author": {
+		"email": "rhogeranacleto@gmail.com",
+		"name": "Rhoger Anacleto",
+		"url": "rhogeranacleto.github.com"
+	},
+	"bundleDependencies": [
+		"browserify"
+	],
+	"dependencies": {
+		"browserify": "^14.3.0"
+	}
+}
