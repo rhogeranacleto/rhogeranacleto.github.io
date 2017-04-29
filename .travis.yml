@@ -1,4 +1,11 @@
 language: javascript
+before_install:
+ - chmod +x build.sh
 install:
   - npm install
 script: ./build.sh
+# safelist
+branches:
+  only:
+  - master
+  - dev
