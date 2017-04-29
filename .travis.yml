@@ -16,6 +16,6 @@ after_success:
       printf '#!/bin/sh -e\necho %s' "$GH_PUBLISH_TOKEN" > gh-publish-pass.sh && chmod u+x gh-publish-pass.sh &&
       git add . &&
       git commit -m 'Auto-publishing via TravisCI [skip ci]' &&
-      GIT_ASKPASS=./gh-publish-pass.sh git push origin +HEAD:refs/heads/gh-pages
+      GIT_ASKPASS=./gh-publish-pass.sh git push origin master
       ;
     fi
