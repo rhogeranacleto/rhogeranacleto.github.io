@@ -8,4 +8,3 @@ script: ./build.sh
 branches:
   only:
   - master
-  - dev
