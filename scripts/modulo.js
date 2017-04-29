@@ -1,1 +1,1 @@
-module.exports = 'Exporta isso';
+module.exports = 'OGRA É OTRO MODULO ESPORTADO';
