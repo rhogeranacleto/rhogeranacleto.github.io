@@ -14,4 +14,4 @@ deploy:
     branch: master
 env:
   global:
-    - GITHUB_REPO: "rhogeranacleto/rhogeranacleto.guthub.io"
+    - GITHUB_REPO: "rhogeranacleto/rhogeranacleto.github.io"
