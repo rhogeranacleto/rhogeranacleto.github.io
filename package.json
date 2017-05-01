@@ -6,6 +6,19 @@
 		"name": "Rhoger Anacleto",
 		"url": "rhogeranacleto.github.com"
 	},
+	"repository": {
+		"type": "Personal",
+		"url": "https://github.com/rhogeranacleto/rhogeranacleto.github.io.git"
+	},
+	"bugs": {
+		"email": "rhogeranacleto@gmail.com",
+		"url": "https://github.com/rhogeranacleto/rhogeranacleto.github.io/issues"
+	},
+	"description": "My personal persentation",
+	"homepage": "rhogeranacleto.github.io",
+	"maintainers": [
+		"rhogeranacleto@gmail.com"
+	],
 	"bundleDependencies": [
 		"browserify"
 	],
