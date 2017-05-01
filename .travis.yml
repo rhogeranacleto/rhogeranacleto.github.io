@@ -9,6 +9,9 @@ script: ./build.sh
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  github_token: $GH_PUBLISH_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: master
+env:
+  global:
+    - GITHUB_REPO: "rhogeranacleto/rhogeranacleto.guthub.io"
