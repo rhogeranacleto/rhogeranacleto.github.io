@@ -152,6 +152,10 @@ h4,
 	flex: 2;
 }
 
+#contact .col a{
+	color: inherit;
+}
+
 #content {
 	display: flex;
 }
