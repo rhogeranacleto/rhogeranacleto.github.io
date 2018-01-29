@@ -1,1 +1,0 @@
-module.exports = 'eu acho que não deu certo';
