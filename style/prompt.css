@@ -1,0 +1,43 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Lato', Arial;
+}
+
+.prompt {
+	font-family: 'VT323', monospace;
+	background: #000;
+	color: #55ff55;
+	padding: 5px;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	position: fixed;
+	overflow-y: auto;
+}
+
+.prompt.minimised {
+	height: 40%;
+	bottom: 0;
+}
+
+.prompt p {
+	margin: 0;
+	font-size: 18px;
+}
+
+.ra>.me {
+	color: #c200ff;
+}
+
+.prompt .active:after {
+	content: '_';
+}
+
+.prompt .skip {
+	color: white;
+}
+
+main.hide {
+	display: none;
+}

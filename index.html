@@ -4,13 +4,47 @@
 	<title>Rhoger Anacleto</title>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="style/prompt.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 
 <body>
-	<h2>OPS! nothing here for while...</h2>
-	I'm working in this website yet.
-	Access my curriculum on <a href="cv/index.html">Rhoger Anacleto</a>
+	<div class="prompt" id="prompt">
+		<p>./activate_rhogeranacleto.sh</p>
+		<p class="skip ra">Olá mundo!</p>
+		<p class="skip ra">Vou mostrar meu site para você</p>
+		<p class="skip ra">Primeiro, deixe-me minimizar este terminal...</p>
+		<p data-after="minimise" data-wait="900">Minimise</p>
+		<p class="skip">Ok, bem melhor!</p>
+		<p class="skip">Vou começar</p>
+		<p class="skip">Preciso instalar algumas coisas para te mostrar o site...</p>
+		<p>sudo apt-get install portifolio</p>
+		<p data-text-before="Password: " data-wait="1000">*********</p>
+		<p class="skip">Buscando dados...</p>
+		<p class="skip" data-wait="100">Buscando dados...</p>
+		<p class="skip">Buscando dados...</p>
+		<p class="skip" data-wait="400">Buscando dados...</p>
+		<p class="skip" data-after="showSite">Site instalado com sucesso!</p>
+		<p class="skip ra">Já está instalado, mas está meio feio...</p>
+		<p class="skip ra">Falta uma corzinha, não?</p>
+		<p>sudo portifolio install amazing-colors</p>
+		<p class="skip">Instalando cores...</p>
+		<p class="skip" data-wait="800" data-after="showColors">Cores instaladas com sucesso!</p>
+		<p class="skip ra">Esta parte está feita</p>
+		<p class="skip ra">Mas ainda está faltando alguma coisa...</p>
+		<p class="skip ra">Já sei! Presicamos instalar as fontes</p>
+		<p>sudo portifolio install amazing-fonts</p>
+		<p class="skip">Instalando fontes...</p>
+		<p class="skip" data-wait="800" data-after="showFonts">Fontes instaladas com sucesso!</p>
+		<p class="skip ra">Perfeito!</p>
+		<p class="skip ra">Para ficar melhor agora só falta fechar esse terminal não é mesmo?</p>
+		<p class="skip ra">Me conheça melhor aí :)</p>
+		<p data-wait="5000" data-after="close">close</p>
+	</div>
+	<main class="hide">
+		<h1>aqui está o site</h1>
+	</main>
 </body>
+<script src="scripts/prompt.js"></script>
 
 </html>
