@@ -50,7 +50,7 @@ var terminal = function() {
 
 		var typeChar = function() {
 
-			var rand = Math.round(Math.random() * 150) + 25;
+			var rand = element.attr('data-skip') ? Number(element.attr('data-skip')) : Math.round(Math.random() * 150) + 25;
 
 			setTimeout(function() {
 
@@ -83,7 +83,7 @@ var terminal = function() {
 		}
 
 		//content = 'echo "' + content + '"';
-		if (!skip) {
+		if (!skip || element.hasClass('ra')) {
 
 			element.append('~$ ').addClass('active');
 		}

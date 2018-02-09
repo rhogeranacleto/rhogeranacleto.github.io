@@ -34,7 +34,8 @@ body {
 	content: '_';
 }
 
-.prompt .skip {
+.prompt .skip,
+.prompt .ra {
 	color: white;
 }
 
