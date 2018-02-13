@@ -6,6 +6,10 @@ var source = require('vinyl-source-stream');
 var less = require('gulp-less');
 var tsProject = ts.createProject('./tsconfig.json');
 var connect = require('gulp-connect');
+var buffer = require('vinyl-buffer');
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
+var gutil = require('gulp-util');
 /*
 compile typescript
 use ES5 and commonJS module
@@ -59,7 +63,20 @@ now is only for Javascript files
 */
 gulp.task('browserify', function() {
 
-	browserify('./dist/js/main.js').bundle().pipe(source('main.js')).pipe(gulp.dest('dist/js'));
+	browserify({
+			entries: ['./dist/js/main.js', './dist/js/prompt.js']
+		})
+		.bundle()
+		.pipe(source('min.js'))
+		.pipe(buffer())
+		.pipe(sourcemaps.init({
+			loadMaps: true
+		}))
+		// Add transformation tasks to the pipeline here.
+		.pipe(uglify())
+		.on('error', gutil.log)
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest('dist/js'));
 });
 /*
 Watch typescript and less

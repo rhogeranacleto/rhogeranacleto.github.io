@@ -24,6 +24,10 @@
 		"gulp-less": "^3.5.0",
 		"gulp-typescript": "^4.0.1",
 		"gulp-watch": "^5.0.0",
+		"gulp-uglify": "^3.0.0",
+		"gulp-sourcemaps": "^2.6.4",
+		"vinyl-buffer": "^1.0.1",
+		"gulp-util": "3.0.8",
 		"typescript": "^2.7.1",
 		"vinyl-source-stream": "^2.0.0"
 	},
