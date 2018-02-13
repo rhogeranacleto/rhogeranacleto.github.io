@@ -38,7 +38,7 @@ Automatic Live Reload
 gulp.task('livereload', function() {
 
 	gulp.src(['dist/styles/*.css', 'dist/js/*.js'])
-		.pipe(watch(['dist/styles/*.css', 'dist/js/*.js']))
+		.pipe(watch(['dist/styles/*.css', 'dist/js/*.js', 'index.html']))
 		.pipe(connect.reload());
 });
 /*
