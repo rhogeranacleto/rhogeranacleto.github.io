@@ -12,7 +12,7 @@ var events = {
         $('main').removeClass('hide');
     },
     showColors: function () {
-        $('head').append('<link rel="stylesheet" href="style/main.css">');
+        $('head').append('<link rel="stylesheet" href="dist/styles/main.css">');
     },
     showFonts: function () {
         $('head').append('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet">');

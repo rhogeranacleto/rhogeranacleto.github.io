@@ -19,7 +19,7 @@ var events = {
 	},
 	showColors: function () {
 
-		$('head').append('<link rel="stylesheet" href="style/main.css">')
+		$('head').append('<link rel="stylesheet" href="dist/styles/main.css">')
 	},
 	showFonts: function () {
 

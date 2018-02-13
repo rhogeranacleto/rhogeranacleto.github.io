@@ -16,29 +16,27 @@ body {
 	position: fixed;
 	overflow-y: auto;
 	z-index: 100;
+	&.minimised {
+		height: 40%;
+		bottom: 0;
+	}
+	p {
+		margin: 0;
+		font-size: 18px;
+	}
+	.active:after {
+		content: '_';
+	}
+	.skip,
+	.ra {
+		color: white;
+	}
 }
 
-.prompt.minimised {
-	height: 40%;
-	bottom: 0;
-}
-
-.prompt p {
-	margin: 0;
-	font-size: 18px;
-}
-
-.ra>.me {
-	color: #c200ff;
-}
-
-.prompt .active:after {
-	content: '_';
-}
-
-.prompt .skip,
-.prompt .ra {
-	color: white;
+.ra {
+	>.me {
+		color: #c200ff;
+	}
 }
 
 main.hide {

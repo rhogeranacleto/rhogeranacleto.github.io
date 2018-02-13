@@ -24,15 +24,15 @@ body {
   margin: 0;
   font-size: 18px;
 }
-.ra > .me {
-  color: #c200ff;
-}
 .prompt .active:after {
   content: '_';
 }
 .prompt .skip,
 .prompt .ra {
   color: white;
+}
+.ra > .me {
+  color: #c200ff;
 }
 main.hide {
   visibility: hidden;
