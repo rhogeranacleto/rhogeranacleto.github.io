@@ -2,6 +2,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'Lato', Arial;
+	overflow-y: scroll;
 }
 
 .prompt {
@@ -14,6 +15,7 @@ body {
 	box-sizing: border-box;
 	position: fixed;
 	overflow-y: auto;
+	z-index: 100;
 }
 
 .prompt.minimised {
@@ -40,5 +42,5 @@ body {
 }
 
 main.hide {
-	display: none;
+	visibility: hidden;
 }

@@ -122,5 +122,5 @@ var terminal = function() {
 
 $(function() {
 
-	terminal();
+	//terminal();
 });
