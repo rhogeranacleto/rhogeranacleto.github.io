@@ -1,0 +1,182 @@
+header > h1 {
+  color: white;
+  /* text-transform: uppercase; */
+  font-size: 45px;
+  margin: 60px 0 20px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: #000000e5;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.5) 100%);
+}
+header > .cover {
+  border-radius: 100%;
+  margin: 60px 0 0;
+  width: 175px;
+}
+header > .bg {
+  position: absolute;
+  z-index: -1;
+  background-image: url(https://static.pexels.com/photos/249798/pexels-photo-249798.png);
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  /* filter: blur(7px); */
+  background-size: cover;
+  background-position: center center;
+}
+header > summary {
+  margin-bottom: 60px;
+  font-size: 20px;
+  color: white;
+}
+#content {
+  display: flex;
+  /* background: url(http://www.reimag.co.za/wp-content/uploads/2015/10/clean-white-polygon-backgrounds-8.jpg); */
+  background-size: cover;
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+#content > .fill {
+  flex: 1;
+}
+#content > .column {
+  width: 40%;
+  padding: 0 10px;
+}
+#content > .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: consolas;
+  font-size: 13px;
+  color: #f1f1f1;
+  word-break: break-all;
+  z-index: -1;
+}
+.card {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  /* padding: 5px; */
+  border-radius: 2px;
+  /* box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12); */
+  overflow: hidden;
+  background: #fff;
+}
+.card > h1 {
+  font-size: 20px;
+  margin: 0;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  /* text-transform: uppercase; */
+}
+.card > .body {
+  padding: 15px;
+}
+/* Sobre mim */
+#card-who-am-i h2 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+#card-who-am-i .body {
+  padding-top: 0;
+}
+/* Regina george */
+#card-options-about-me .quote {
+  font-style: italic;
+  text-align: center;
+  margin-top: 5px;
+}
+#card-options-about-me .quote:before {
+  content: '"';
+  font-size: 20px;
+  margin-right: 5px;
+}
+#card-options-about-me .quote:after {
+  content: '"';
+  font-size: 20px;
+  margin-left: 5px;
+}
+/* XP */
+#card-languade-xp > h1 {
+  display: flex;
+}
+#card-languade-xp > h1 > span {
+  flex: 1;
+}
+.content-xp summary {
+  font-size: 13px;
+  color: #807c7c;
+  /* margin-left: 8px; */
+}
+.xp-bar {
+  border: 1px solid #d0d0d0;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.xp-bar-fill {
+  text-align: right;
+  color: #fff;
+  padding: 1px 5px;
+  box-sizing: border-box;
+}
+.xp-bar-fill-5 .xp-bar-fill,
+.xp-bar-fill-6 .xp-bar-fill {
+  background: #2e7d32;
+}
+.xp-bar-fill-4 .xp-bar-fill {
+  background: #0277bd;
+}
+.xp-bar-fill-3 .xp-bar-fill {
+  background: #f9a825;
+}
+.xp-bar-fill-2 .xp-bar-fill {
+  background: #d84315;
+}
+.xp-bar-fill-1 .xp-bar-fill {
+  background: #c62828;
+}
+/* instagram */
+#card-instagram img {
+  width: 100%;
+}
+#card-instagram .caption {
+  padding: 15px;
+  color: #545454;
+}
+/* contact */
+#card-contact .body {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#card-contact .icons-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#card-contact .icons-content > div {
+  margin-bottom: 15px;
+}
+#card-contact .icons {
+  font-size: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 15px;
+}
+#card-contact .icons-content span {
+  color: #545454;
+}
+#card-contact a {
+  color: inherit;
+}

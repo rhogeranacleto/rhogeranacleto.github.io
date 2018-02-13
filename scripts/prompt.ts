@@ -3,37 +3,37 @@ $lines.hide();
 
 var lineContents = new Array();
 
-function executeEvent(event) {
+function executeEvent(event: string) {
 
 	return events[event]();
 }
 
 var events = {
-	minimise: function() {
+	minimise: function () {
 
 		$('#prompt').addClass('minimised');
 	},
-	showSite: function() {
+	showSite: function () {
 
 		$('main').removeClass('hide');
 	},
-	showColors: function() {
+	showColors: function () {
 
 		$('head').append('<link rel="stylesheet" href="style/main.css">')
 	},
-	showFonts: function() {
+	showFonts: function () {
 
 		$('head').append('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet">')
 	},
-	close: function() {
+	close: function () {
 
 		$('#prompt').remove();
 	}
 };
 
-var terminal = function() {
+var terminal = function () {
 
-	typeLine = function(idx) {
+	const typeLine = function (idx?: number) {
 
 		idx == null && (idx = 0);
 		var element = $lines.eq(idx);
@@ -48,11 +48,11 @@ var terminal = function() {
 
 		var skip = element.hasClass('skip');
 
-		var typeChar = function() {
+		var typeChar = function () {
 
 			var rand = element.attr('data-skip') ? Number(element.attr('data-skip')) : Math.round(Math.random() * 150) + 25;
 
-			setTimeout(function() {
+			setTimeout(function () {
 
 				var char = content[charIdx++];
 				element.append(char);
@@ -111,7 +111,7 @@ var terminal = function() {
 		}
 	}
 
-	$lines.each(function(i) {
+	$lines.each(function (i) {
 
 		lineContents[i] = $(this).text();
 		$(this).text('').show();
@@ -120,7 +120,7 @@ var terminal = function() {
 	typeLine();
 }
 
-$(function() {
+$(function () {
 
 	//terminal();
 });

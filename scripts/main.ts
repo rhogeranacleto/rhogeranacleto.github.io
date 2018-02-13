@@ -19,92 +19,112 @@ const cards = [{
 var languages = [{
 	name: 'Javascript',
 	xp: 100,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'CSS',
 	xp: 100,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'HTML',
 	xp: 100,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'NodeJS',
 	xp: 96,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'Angular',
 	xp: 90,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'TypeScript',
 	xp: 87,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'C#',
 	xp: 70,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'EmberJS',
 	xp: 60,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'LESS',
 	xp: 70,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'GIT',
 	xp: 90,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'SQL',
 	xp: 95,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'C++',
 	xp: 10,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'PHP',
 	xp: 40,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'Java',
 	xp: 30,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'MongoDB',
 	xp: 85,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'GraphQL',
 	xp: 20,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: '.NET',
 	xp: 50,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'Selenium',
 	xp: 40,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'Photoshop',
 	xp: 60,
-	width: 0
+	width: 0,
+	class: ''
 }, {
 	name: 'shell',
 	xp: 20,
-	width: 0
+	width: 0,
+	class: ''
 }];
 
-$(function() {
+$(function () {
 
 	var maxXP = languages.reduce((p, c) => p.xp > c.xp ? p : c).xp;
 
 	var sumXP = languages.map(language => language.xp).reduce((sum, xp) => sum + xp);
 
-	$('.sum-xp', '#card-languade-xp').text(sumXP + 'XP');
+	$('.sum-xp', $('#card-languade-xp')).text(sumXP + 'XP');
 
 	$.get('https://www.instagram.com/rhogeranacleto?__a=1').then(r => {
 
@@ -118,9 +138,9 @@ $(function() {
 
 			language.width = 100 * (language.xp / maxXP);
 
-			language.class = 'xp-bar-fill-' + parseInt((language.width / 20) + 1);
+			language.class = `xp-bar-fill-${parseInt(((language.width / 20) + 1).toString())}`;
 
-			$('.body', '#card-languade-xp').append(Mustache.render($('#card-languade-xp-template').html(), language));
+			$('.body', $('#card-languade-xp')).append(Mustache.render($('#card-languade-xp-template').html(), language));
 		})
 
 		$('.card').each((i, card) => {
@@ -130,7 +150,7 @@ $(function() {
 		});
 	});
 
-	var letterWidth = $('.bg', '#content').width();
+	var letterWidth = $('.bg', $('#content')).width();
 
 	console.log($(document).width(), $(document).width() / letterWidth, letterWidth);
 });

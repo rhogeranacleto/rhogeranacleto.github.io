@@ -1,29 +1,35 @@
 {
 	"name": "rhogeranacleto",
 	"version": "1.0.0",
-	"author": {
-		"email": "rhogeranacleto@gmail.com",
-		"name": "Rhoger Anacleto",
-		"url": "rhogeranacleto.github.com"
-	},
+	"author": "Rhoger Anacleto <rhogeranacleto@gmail.com> (rhogeranacleto.github.com)",
 	"repository": {
 		"type": "Personal",
-		"url": "https://github.com/rhogeranacleto/rhogeranacleto.github.io.git"
+		"url": "git+https://github.com/rhogeranacleto/rhogeranacleto.github.io.git"
 	},
 	"bugs": {
-		"email": "rhogeranacleto@gmail.com",
-		"url": "https://github.com/rhogeranacleto/rhogeranacleto.github.io/issues"
+		"url": "https://github.com/rhogeranacleto/rhogeranacleto.github.io/issues",
+		"email": "rhogeranacleto@gmail.com"
 	},
 	"description": "My personal persentation",
-	"homepage": "rhogeranacleto.github.io",
+	"homepage": "http://rhogeranacleto.github.io",
 	"maintainers": [
 		"rhogeranacleto@gmail.com"
 	],
-	"bundleDependencies": [
-		"browserify"
-	],
-	"dependencies": {
-		"browserify": "^14.3.0",
-		"less": "^2.7.2"
-	}
+	"devDependencies": {
+		"@types/jquery": "^3.3.0",
+		"@types/mustache": "0.8.30",
+		"browserify": "^16.1.0",
+		"gulp": "^3.9.1",
+		"gulp-connect": "^5.2.0",
+		"gulp-less": "^3.5.0",
+		"gulp-typescript": "^4.0.1",
+		"gulp-watch": "^5.0.0",
+		"typescript": "^2.7.1",
+		"vinyl-source-stream": "^2.0.0"
+	},
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"license": "ISC"
 }
