@@ -120,7 +120,7 @@ var chars = '1234567890!@#$%&*()qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXC
 $(function () {
     var maxXP = languages.reduce(function (p, c) { return p.xp > c.xp ? p : c; }).xp;
     var sumXP = languages.map(function (language) { return language.xp; }).reduce(function (sum, xp) { return sum + xp; });
-    $('.sum-xp', $('#card-languade-xp')).text(sumXP + 'XP');
+    $('.sum-xp', $('#card-languade-xp')).text(sumXP + ' XP');
     $.get('https://www.instagram.com/rhogeranacleto?__a=1').then(function (r) {
         var media = r.user.media.nodes[0];
         $('#card-instagram').find('img').attr('src', media.display_src).end().find('.caption>span').text(media.caption);

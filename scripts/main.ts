@@ -126,7 +126,7 @@ $(function () {
 
 	var sumXP = languages.map(language => language.xp).reduce((sum, xp) => sum + xp);
 
-	$('.sum-xp', $('#card-languade-xp')).text(sumXP + 'XP');
+	$('.sum-xp', $('#card-languade-xp')).text(sumXP + ' XP');
 
 	$.get('https://www.instagram.com/rhogeranacleto?__a=1').then(r => {
 
