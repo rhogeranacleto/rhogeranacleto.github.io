@@ -125,8 +125,13 @@ header {
 #card-languade-xp {
 	>h1 {
 		display: flex;
+		align-items: center;
 		>span {
 			flex: 1;
+		}
+		>i {
+			margin-right: 10px;
+			color: #545454;
 		}
 	}
 	.content-xp {
@@ -184,12 +189,18 @@ header {
 /* instagram */
 
 #card-instagram {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	img {
 		width: 100%;
 	}
 	.caption {
 		padding: 15px;
 		color: #545454;
+		>span {
+			margin-left: 10px;
+		}
 	}
 }
 
