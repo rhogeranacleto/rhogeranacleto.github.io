@@ -116,6 +116,7 @@ var languages = [{
         width: 0,
         class: ''
     }];
+var chars = '1234567890!@#$%&*()qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
 $(function () {
     var maxXP = languages.reduce(function (p, c) { return p.xp > c.xp ? p : c; }).xp;
     var sumXP = languages.map(function (language) { return language.xp; }).reduce(function (sum, xp) { return sum + xp; });
@@ -133,7 +134,15 @@ $(function () {
             var columnsContents = $('.column-content');
             $(columnsContents.get().reduce(function (e, i) { return e.offsetHeight > i.offsetHeight ? i : e; }, columnsContents.get(0))).append(card);
         });
+        var letterWidth = $('.bg', $('#content')).width();
+        var letterHeight = $('.bg', $('#content')).height();
+        var count = Math.floor($(document).width() / 8) * ((Math.floor($('#content').height() / 20)) + 1);
+        console.log(count, ((Math.floor($('#content').height() / 15)) + 1));
+        var string = '';
+        for (var i = 0; i < count; i++) {
+            string += chars.charAt(Math.floor(Math.random() * chars.length));
+            ;
+        }
+        $('.bg', $('#content')).html(string);
     });
-    var letterWidth = $('.bg', $('#content')).width();
-    console.log($(document).width(), $(document).width() / letterWidth, letterWidth);
 });

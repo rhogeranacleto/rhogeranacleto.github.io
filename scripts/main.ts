@@ -118,6 +118,8 @@ var languages = [{
 	class: ''
 }];
 
+const chars = '1234567890!@#$%&*()qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+
 $(function () {
 
 	var maxXP = languages.reduce((p, c) => p.xp > c.xp ? p : c).xp;
@@ -148,9 +150,21 @@ $(function () {
 			var columnsContents = $('.column-content');
 			$(columnsContents.get().reduce((e, i) => e.offsetHeight > i.offsetHeight ? i : e, columnsContents.get(0))).append(card);
 		});
+
+		var letterWidth = $('.bg', $('#content')).width();
+		var letterHeight = $('.bg', $('#content')).height();
+
+		const count = Math.floor($(document).width() / 8) * ((Math.floor($('#content').height() / 20)) + 1);
+
+		console.log(count, ((Math.floor($('#content').height() / 15)) + 1));
+
+		var string = '';
+
+		for (let i = 0; i < count; i++) {
+
+			string += chars.charAt(Math.floor(Math.random() * chars.length));;
+		}
+
+		$('.bg', $('#content')).html(string);
 	});
-
-	var letterWidth = $('.bg', $('#content')).width();
-
-	console.log($(document).width(), $(document).width() / letterWidth, letterWidth);
 });
