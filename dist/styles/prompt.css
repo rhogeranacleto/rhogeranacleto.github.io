@@ -1,0 +1,52 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito', Arial;
+  overflow-x: hidden;
+}
+body.use-comic-sans {
+  font-family: 'Comic Sans MS';
+}
+.prompt {
+  font-family: 'VT323', monospace;
+  background: #000;
+  color: #55ff55;
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 100;
+}
+.prompt.minimised {
+  height: 40%;
+  bottom: 0;
+}
+.prompt p {
+  margin: 0;
+  font-size: 18px;
+}
+.prompt .active:after {
+  content: '_';
+}
+.prompt .ra {
+  color: white;
+}
+.prompt .forward {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  border: 1px solid;
+  padding: 5px 7px;
+  border-radius: 3px;
+}
+.ra > .me {
+  color: #c200ff;
+}
+main.hide {
+  visibility: hidden;
+}

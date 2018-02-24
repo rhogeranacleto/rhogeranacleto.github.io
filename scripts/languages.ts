@@ -1,0 +1,101 @@
+export const LANGUAGES = [{
+	name: 'Javascript',
+	xp: 100,
+	width: 0,
+	class: ''
+}, {
+	name: 'CSS',
+	xp: 100,
+	width: 0,
+	class: ''
+}, {
+	name: 'HTML',
+	xp: 100,
+	width: 0,
+	class: ''
+}, {
+	name: 'NodeJS',
+	xp: 96,
+	width: 0,
+	class: ''
+}, {
+	name: 'Angular',
+	xp: 90,
+	width: 0,
+	class: ''
+}, {
+	name: 'TypeScript',
+	xp: 87,
+	width: 0,
+	class: ''
+}, {
+	name: 'C#',
+	xp: 70,
+	width: 0,
+	class: ''
+}, {
+	name: 'EmberJS',
+	xp: 60,
+	width: 0,
+	class: ''
+}, {
+	name: 'LESS',
+	xp: 70,
+	width: 0,
+	class: ''
+}, {
+	name: 'GIT',
+	xp: 90,
+	width: 0,
+	class: ''
+}, {
+	name: 'SQL',
+	xp: 95,
+	width: 0,
+	class: ''
+}, {
+	name: 'C++',
+	xp: 10,
+	width: 0,
+	class: ''
+}, {
+	name: 'PHP',
+	xp: 40,
+	width: 0,
+	class: ''
+}, {
+	name: 'Java',
+	xp: 30,
+	width: 0,
+	class: ''
+}, {
+	name: 'MongoDB',
+	xp: 85,
+	width: 0,
+	class: ''
+}, {
+	name: 'GraphQL',
+	xp: 20,
+	width: 0,
+	class: ''
+}, {
+	name: '.NET',
+	xp: 50,
+	width: 0,
+	class: ''
+}, {
+	name: 'Selenium',
+	xp: 40,
+	width: 0,
+	class: ''
+}, {
+	name: 'Photoshop',
+	xp: 60,
+	width: 0,
+	class: ''
+}, {
+	name: 'shell',
+	xp: 20,
+	width: 0,
+	class: ''
+}];
