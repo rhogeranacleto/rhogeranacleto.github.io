@@ -42,7 +42,7 @@ var events = {
 		// $('head').append('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet">');
 		$('head').append('<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700" rel="stylesheet">');
 	},
-	6: function (skip: boolean) {
+	6: function (skip?: boolean) {
 
 		events.step++;
 		$('#prompt').remove();
@@ -145,7 +145,7 @@ $(function () {
 
 		$('#content > .column').eq(0).remove();
 
-		events[6]()
+		events[6](false);
 		events[5]();
 		events[3]();
 		events[2]();

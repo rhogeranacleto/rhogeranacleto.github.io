@@ -97,7 +97,7 @@ var terminal = function () {
 $(function () {
     if ($(window).width() <= 425) {
         $('#content > .column').eq(0).remove();
-        events[6]();
+        events[6](false);
         events[5]();
         events[3]();
         events[2]();
