@@ -5,7 +5,7 @@ header {
 	position: relative;
 	overflow: hidden;
 	background: #000000e5;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.5) 100%);
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 30%, rgba(0, 0, 0, 0.5) 100%);
 	>h1 {
 		color: white;
 		/* text-transform: uppercase; */
@@ -237,5 +237,44 @@ header {
 	}
 	a {
 		color: inherit;
+	}
+}
+
+#card-quick-facts{
+
+	.body{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-bottom: 0;
+	}
+
+	.item{
+		border:1px solid #47924a;
+		padding: 3px;
+		padding-left: 5px;
+		background: #55a759;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		border-radius: 15px;
+		display: flex;
+		align-items: baseline;
+		color: #fff;
+		font-size: 12px;	
+
+		.badge{
+			background: #fff;
+			border-radius: 100px;
+			padding: 2px 4px;
+			margin-left: 5px;
+			color: #000;
+			font-size: 14px;
+		}
+	}
+}
+
+#card-about-this-website{
+	i{
+		color: #b71c1c;
 	}
 }
