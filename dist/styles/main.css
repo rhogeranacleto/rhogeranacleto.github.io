@@ -7,11 +7,17 @@ header {
   background: #000000e5;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 30%, rgba(0, 0, 0, 0.5) 100%);
 }
+@media screen and (max-device-width: 425px) {
+  header {
+    height: 100%;
+  }
+}
 header > h1 {
   color: white;
   /* text-transform: uppercase; */
   font-size: 45px;
   margin: 60px 0 20px;
+  text-align: center;
 }
 header > .cover {
   border-radius: 100%;
@@ -50,6 +56,11 @@ header > summary {
 #content > .column {
   width: 40%;
   padding: 0 10px;
+}
+@media screen and (max-device-width: 425px) {
+  #content > .column {
+    width: 100%;
+  }
 }
 #content > .bg {
   position: absolute;
@@ -193,6 +204,11 @@ header > summary {
   width: 60%;
   margin-top: 15px;
 }
+@media screen and (max-device-width: 425px) {
+  #card-contact .icons {
+    width: 100%;
+  }
+}
 #card-contact .icons-content span {
   color: #545454;
 }
@@ -206,10 +222,10 @@ header > summary {
   padding-bottom: 0;
 }
 #card-quick-facts .item {
-  border: 1px solid #47924a;
+  border: 1px solid #bd541a;
   padding: 3px;
   padding-left: 5px;
-  background: #55a759;
+  background: #e66e2c;
   margin-bottom: 10px;
   margin-right: 10px;
   border-radius: 15px;
@@ -223,8 +239,11 @@ header > summary {
   border-radius: 100px;
   padding: 2px 4px;
   margin-left: 5px;
-  color: #000;
+  color: #3a3a3a;
   font-size: 14px;
+}
+#card-curriculum i {
+  color: #e2582e;
 }
 #card-about-this-website i {
   color: #b71c1c;

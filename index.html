@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="dist/styles/prompt.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-	<link rel="stylesheet" href="dist/styles/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="dist/styles/main.css"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet"> -->
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42271809-2"></script>
@@ -22,6 +22,7 @@
 
 		gtag('config', 'UA-42271809-2');
 	</script>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<!-- <script>
 		(function(d, s, id) {
 			var js, djs = d.getElementsByTagName(s)[0];
@@ -35,43 +36,53 @@
 </head>
 
 <body>
-	<div class="prompt" id="prompt" style="display: none">
-		<p>./activate_rhogeranacleto.sh</p>
-		<p class="skip ra">Olá mundo!</p>
-		<p class="skip ra" data-wait="100">Deixe-me mostrar um site que eu fiz para você</p>
-		<p class="skip ra" data-wait="900">Antes, deixe-me minimizar este terminal...</p>
-		<p data-after="minimise" data-wait="900">minimise</p>
-		<p class="skip ra">Ok, bem melhor!</p>
-		<p class="skip ra">Vou começar</p>
-		<p class="skip ra" data-wait="900">Preciso instalar algumas coisas para te mostrar o site...</p>
+	<div class="prompt" id="prompt">
+		<p class="skip">./activate_rhogeranacleto.sh</p>
+		<p class="ra">Alô?</p>
+		<p class="ra" data-wait="1900">Tem alguém aí?</p>
+		<p class="ra" data-wait="1500">Opa! tudo bem?</p>
+		<p class="ra" data-wait="1000">Eu sou Rhoger!</p>
+		<p class="ra" data-wait="900">Vou mostrar um site que eu fiz</p>
+		<p class="ra" data-wait="900">Antes, deixe-me minimizar este terminal...</p>
+		<p class="ra" data-wait="900">Preciso digitar uns comandos de hacker, rsrs</p>
+		<p data-after="1" data-wait="900">minimise</p>
+		<p class="ra" data-wait="1000">Ok, bem melhor!</p>
+		<p class="ra">Vou começar...</p>
+		<p class="ra" data-wait="900">Primeiro vou instalar o site aqui</p>
 		<p>sudo apt-get install portfolio</p>
 		<p data-text-before="Password: " data-wait="1000">*********</p>
 		<p class="skip">Buscando dados...</p>
 		<p class="skip" data-wait="100">Buscando dados...</p>
 		<p class="skip">Buscando dados...</p>
 		<p class="skip" data-wait="400">Buscando dados...</p>
-		<p class="skip" data-after="showSite">rhogeranacleto.github.io instalado com sucesso!</p>
-		<p class="skip ra" data-wait="100">HE IS ALIVE!</p>
+		<p class="skip" data-after="2">rhogeranacleto.github.io instalado com sucesso!</p>
+		<p class="ra" data-wait="100">HE IS ALIVE!</p>
 		<p class="ra" data-wait="700" data-skip="200">MUAHAHAHA!</p>
-		<p class="skip ra">Brinks!</p>
-		<p class="skip ra" data-wait="1000">Acho que você já consegue vê-lo</p>
-		<p class="skip ra" data-wait="700">Está meio feio...</p>
-		<p class="skip ra">Falta uma corzinha, não?</p>
-		<p>sudo portfolio install amazing-colors</p>
-		<p class="skip">Instalando cores...</p>
-		<p class="skip" data-wait="800" data-after="showColors">Cores instaladas com sucesso!</p>
-		<p class="skip ra">Esta parte está feita</p>
-		<p class="skip ra">Mas ainda está faltando alguma coisa...</p>
-		<p class="skip ra">Já sei! Presicamos instalar as fontes</p>
-		<p>sudo portfolio install amazing-fonts</p>
-		<p class="skip">Instalando fontes...</p>
-		<p class="skip" data-wait="800" data-after="showFonts">Fontes instaladas com sucesso!</p>
-		<p class="skip ra">Perfeito!</p>
-		<p class="skip ra">Para ficar melhor agora só falta fechar esse terminal não é mesmo?</p>
-		<p class="skip ra">Me conheça melhor aí :)</p>
-		<p data-wait="5000" data-after="close">close</p>
+		<p class="ra">Brinks!</p>
+		<p class="ra" data-wait="1000">Já da para vê-lo</p>
+		<p class="ra" data-wait="700">Está meio feio...</p>
+		<p class="ra">Eu vou arrumar</p>
+		<p>sudo portfolio install style-colors</p>
+		<p class="skip">Instalando estilo...</p>
+		<p class="skip" data-wait="800" data-after="3">Estilo instaladas com sucesso!</p>
+		<p class="ra">Já está bem melhor</p>
+		<p class="ra">Mas ainda está faltando alguma coisa...</p>
+		<p class="ra">Vou colocar uma fonte bem legal</p>
+		<p>sudo portfolio install comic-sans</p>
+		<p class="skip">Instalando comic-sans...</p>
+		<p class="skip" data-wait="800" data-after="4">Comic-sans instaladas com sucesso!</p>
+		<p class="ra">Ops...</p>
+		<p class="ra">Não era essa que eu queria, hehe</p>
+		<p>sudo portfolio install not-comic-sans-font</p>
+		<p class="skip">Instalando fonte que não é comic sans...</p>
+		<p class="skip" data-wait="800" data-after="5">Fonte que não é comic sans instalada com sucesso!</p>
+		<p class="ra">Perfeito!</p>
+		<p class="ra">Tem outras pessoas me chamando</p>
+		<p class="ra">Tchaaau :)</p>
+		<p data-wait="3000" data-after="6">close</p>
+		<button class="forward" id="forward">Pular apresentação inicial</button>
 	</div>
-	<main class="">
+	<main class="hide">
 		<header>
 			<img class="cover" src="http://gravatar.com/avatar/e860f3826544310a2efeee7608416499?s=200" alt="eu">
 			<h1>Meu nome é Anacleto, Rhoger Anacleto</h1>
@@ -238,12 +249,24 @@
 				<div class="quote">Um dia, ele me socou no rosto… isso foi irado</div>
 			</div>
 		</div>
-		<div id="card-about-this-website" class="card">
-				<h1>Sobre</h1>
-				<div class="body">
-					<p>Este site pessoal foi feito com <i class="fas fa-heart"></i> por mim. O código-fonte é público e você pode vê-lo no meu <a href="https://github.com/rhogeranacleto/rhogeranacleto.github.io">perfil do github</a>.</p>
-				</div>
+		<div id="card-curriculum" class="card">
+			<h1>Currículo</h1>
+			<div class="body">
+				<p>Se quiseres um currículo para imprimir,
+					<a href="https://rhogeranacleto.github.io/cv/index.html">acesse este link</a> ou
+					<a href="https://rhogeranacleto.github.io/cv/en/index.html">em inglês</a>.
+					<i class="fas fa-hand-spock"></i>
+				</p>
 			</div>
+		</div>
+		<div id="card-about-this-website" class="card">
+			<h1>Sobre</h1>
+			<div class="body">
+				<p>Este site pessoal foi feito com
+					<i class="fas fa-heart"></i> por mim. O código-fonte é público e você pode vê-lo no meu
+					<a href="https://github.com/rhogeranacleto/rhogeranacleto.github.io">perfil do github</a>.</p>
+			</div>
+		</div>
 		<!-- <div id="card-languade-xp" class="card">
 			<h1>Ecleticismo é tudo</h1>
 			<div class="body">

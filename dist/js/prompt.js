@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var main_1 = require("./main");
 var $lines = $('#prompt p');
 $lines.hide();
 var lineContents = new Array();
@@ -5,20 +8,35 @@ function executeEvent(event) {
     return events[event]();
 }
 var events = {
-    minimise: function () {
+    step: 0,
+    steps: 6,
+    1: function () {
+        events.step++;
         $('#prompt').addClass('minimised');
     },
-    showSite: function () {
+    2: function () {
+        events.step++;
         $('main').removeClass('hide');
+        main_1.Create();
     },
-    showColors: function () {
+    3: function () {
+        events.step++;
         $('head').append('<link rel="stylesheet" href="dist/styles/main.css">');
     },
-    showFonts: function () {
-        $('head').append('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet">');
+    4: function () {
+        events.step++;
+        $('head').append(' <link href="http://allfont.net/allfont.css?fonts=comic-sans-ms" rel="stylesheet" type="text/css" />');
+        $('body').addClass('use-comic-sans');
     },
-    close: function () {
+    5: function () {
+        events.step++;
+        $('body').removeClass('use-comic-sans');
+        $('head').append('<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700" rel="stylesheet">');
+    },
+    6: function (skip) {
+        events.step++;
         $('#prompt').remove();
+        history.pushState({}, null, '?l=1' + (skip ? '&s=1' : ''));
     }
 };
 var terminal = function () {
@@ -26,7 +44,7 @@ var terminal = function () {
         idx == null && (idx = 0);
         var element = $lines.eq(idx);
         var content = lineContents[idx];
-        if (!content) {
+        if (!content || !$('#prompt').get(0)) {
             return;
         }
         var charIdx = 0;
@@ -43,7 +61,7 @@ var terminal = function () {
                     element.removeClass('active');
                     var after = element.attr('data-after');
                     if (after) {
-                        executeEvent(after);
+                        events[after]();
                     }
                     typeLine(++idx);
                     if ($('#prompt')[0]) {
@@ -77,4 +95,19 @@ var terminal = function () {
     typeLine();
 };
 $(function () {
+    if ($(window).width() <= 425) {
+        $('#content > .column').eq(0).remove();
+        events[6]();
+        events[5]();
+        events[3]();
+        events[2]();
+    }
+    else {
+        terminal();
+    }
+    $('#forward').on('click', function () {
+        do {
+            events[events.step + 1](true);
+        } while (events.step < events.steps);
+    });
 });

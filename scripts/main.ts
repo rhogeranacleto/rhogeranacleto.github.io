@@ -2,7 +2,7 @@ import { LANGUAGES } from "./languages";
 
 const chars = '1234567890!@#$%&*()qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
 
-$(function () {
+export function Create() {
 
 	var maxXP = LANGUAGES.reduce((p, c) => p.xp > c.xp ? p : c).xp;
 
@@ -47,6 +47,6 @@ $(function () {
 
 	$('.bg', $('#content')).html(string);
 	// });
-});
+}
 
 console.log('What are search here? This code is public! Check out on https://github.com/rhogeranacleto/rhogeranacleto.github.io');

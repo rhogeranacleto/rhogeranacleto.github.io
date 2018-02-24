@@ -1,8 +1,11 @@
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Lato', Arial;
-	overflow-y: scroll;
+	font-family: 'Nunito', Arial;
+	overflow-x: hidden;
+	&.use-comic-sans {
+		font-family: 'Comic Sans MS';
+	}
 }
 
 .prompt {
@@ -27,9 +30,19 @@ body {
 	.active:after {
 		content: '_';
 	}
-	.skip,
 	.ra {
 		color: white;
+	}
+	.forward {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		color: #fff;
+		font-family: Arial, Helvetica, sans-serif;
+		background: #000;
+		border: 1px solid;
+		padding: 5px 7px;
+		border-radius: 3px;
 	}
 }
 

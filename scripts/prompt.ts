@@ -1,3 +1,5 @@
+import { Create } from "./main";
+
 var $lines = $('#prompt p');
 $lines.hide();
 
@@ -9,29 +11,46 @@ function executeEvent(event: string) {
 }
 
 var events = {
-	minimise: function () {
+	step: 0,
+	steps: 6,
+	1: function () {
 
+		events.step++;
 		$('#prompt').addClass('minimised');
 	},
-	showSite: function () {
+	2: function () {
 
+		events.step++;
 		$('main').removeClass('hide');
+		Create();
 	},
-	showColors: function () {
+	3: function () {
 
+		events.step++;
 		$('head').append('<link rel="stylesheet" href="dist/styles/main.css">')
 	},
-	showFonts: function () {
+	4: function () {
 
-		$('head').append('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet">')
+		events.step++;
+		$('head').append(' <link href="http://allfont.net/allfont.css?fonts=comic-sans-ms" rel="stylesheet" type="text/css" />');
+		$('body').addClass('use-comic-sans');
 	},
-	close: function () {
+	5: function () {
 
+		events.step++;
+		$('body').removeClass('use-comic-sans');
+		// $('head').append('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet">');
+		$('head').append('<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700" rel="stylesheet">');
+	},
+	6: function (skip: boolean) {
+
+		events.step++;
 		$('#prompt').remove();
+		history.pushState({}, null, '?l=1' + (skip ? '&s=1' : ''));
 	}
 };
 
-var terminal = function () {
+const terminal = function () {
 
 	const typeLine = function (idx?: number) {
 
@@ -39,7 +58,7 @@ var terminal = function () {
 		var element = $lines.eq(idx);
 		var content = lineContents[idx];
 
-		if (!content) {
+		if (!content || !$('#prompt').get(0)) {
 
 			return;
 		}
@@ -69,7 +88,7 @@ var terminal = function () {
 
 					if (after) {
 
-						executeEvent(after);
+						events[after as any]();
 					}
 
 					typeLine(++idx);
@@ -122,5 +141,24 @@ var terminal = function () {
 
 $(function () {
 
-	//terminal();
+	if ($(window).width() <= 425) {
+
+		$('#content > .column').eq(0).remove();
+
+		events[6]()
+		events[5]();
+		events[3]();
+		events[2]();
+	} else {
+
+		terminal();
+	}
+
+	$('#forward').on('click', function () {
+
+		do {
+
+			events[events.step + 1](true);
+		} while (events.step < events.steps);
+	});
 });

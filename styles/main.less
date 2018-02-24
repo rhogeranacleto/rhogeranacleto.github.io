@@ -1,3 +1,4 @@
+@smartphones: ~"screen and (max-device-width: 425px)";
 header {
 	display: flex;
 	flex-direction: column;
@@ -6,11 +7,15 @@ header {
 	overflow: hidden;
 	background: #000000e5;
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 30%, rgba(0, 0, 0, 0.5) 100%);
+	@media @smartphones {
+		height: 100%;
+	}
 	>h1 {
 		color: white;
 		/* text-transform: uppercase; */
 		font-size: 45px;
 		margin: 60px 0 20px;
+		text-align: center;
 	}
 	>.cover {
 		border-radius: 100%;
@@ -50,6 +55,11 @@ header {
 	>.column {
 		width: 40%;
 		padding: 0 10px;
+		@media @smartphones {
+			& {
+				width: 100%;
+			}
+		}
 	}
 	>.bg {
 		position: absolute;
@@ -194,14 +204,14 @@ header {
 	border: none;
 	img {
 		width: 100%;
-	} 
+	}
 	.caption {
 		padding: 15px;
-    color: #ffffff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #0000007a;
+		color: #ffffff;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: #0000007a;
 		>span {
 			margin-left: 10px;
 		}
@@ -229,6 +239,9 @@ header {
 		justify-content: space-between;
 		width: 60%;
 		margin-top: 15px;
+		@media @smartphones {
+			width: 100%;
+		}
 	}
 	.icons-content {
 		span {
@@ -240,41 +253,44 @@ header {
 	}
 }
 
-#card-quick-facts{
-
-	.body{
+#card-quick-facts {
+	.body {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		padding-bottom: 0;
 	}
-
-	.item{
-		border:1px solid #47924a;
+	.item {
+		border: 1px solid #bd541a;
 		padding: 3px;
 		padding-left: 5px;
-		background: #55a759;
+		background: #e66e2c;
 		margin-bottom: 10px;
 		margin-right: 10px;
 		border-radius: 15px;
 		display: flex;
 		align-items: baseline;
 		color: #fff;
-		font-size: 12px;	
-
-		.badge{
+		font-size: 12px;
+		.badge {
 			background: #fff;
 			border-radius: 100px;
 			padding: 2px 4px;
 			margin-left: 5px;
-			color: #000;
+			color: #3a3a3a;
 			font-size: 14px;
 		}
 	}
 }
 
-#card-about-this-website{
-	i{
+#card-curriculum {
+	i {
+		color: #e2582e;
+	}
+}
+
+#card-about-this-website {
+	i {
 		color: #b71c1c;
 	}
 }

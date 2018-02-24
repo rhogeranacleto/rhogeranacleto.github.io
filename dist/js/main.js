@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var languages_1 = require("./languages");
 var chars = '1234567890!@#$%&*()qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
-$(function () {
+function Create() {
     var maxXP = languages_1.LANGUAGES.reduce(function (p, c) { return p.xp > c.xp ? p : c; }).xp;
     var sumXP = languages_1.LANGUAGES.map(function (language) { return language.xp; }).reduce(function (sum, xp) { return sum + xp; });
     $('.sum-xp', $('#card-languade-xp')).text(sumXP + ' XP');
@@ -25,5 +25,6 @@ $(function () {
         ;
     }
     $('.bg', $('#content')).html(string);
-});
+}
+exports.Create = Create;
 console.log('What are search here? This code is public! Check out on https://github.com/rhogeranacleto/rhogeranacleto.github.io');
