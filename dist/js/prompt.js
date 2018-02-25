@@ -25,7 +25,6 @@ var events = {
     },
     4: function () {
         events.step++;
-        $('head').append(' <link href="http://allfont.net/allfont.css?fonts=comic-sans-ms" rel="stylesheet" type="text/css" />');
         $('body').addClass('use-comic-sans');
     },
     5: function () {

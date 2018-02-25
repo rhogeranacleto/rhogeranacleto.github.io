@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Comic Sans MS';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../../fonts/comic-sans-ms.woff') format('woff'), url('../../../fonts/comic-sans-ms.ttf') format('truetype');
+}
 body {
   padding: 0;
   margin: 0;
