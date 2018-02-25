@@ -1,6 +1,7 @@
 import { LANGUAGES } from "./languages";
 
-const chars = '1234567890!@#$%&*()qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+// const chars = '1234567890!@#$%&*()qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+const chars = '01';
 
 export function Create() {
 

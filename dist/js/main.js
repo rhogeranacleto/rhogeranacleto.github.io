@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var languages_1 = require("./languages");
-var chars = '1234567890!@#$%&*()qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+var chars = '01';
 function Create() {
     var maxXP = languages_1.LANGUAGES.reduce(function (p, c) { return p.xp > c.xp ? p : c; }).xp;
     var sumXP = languages_1.LANGUAGES.map(function (language) { return language.xp; }).reduce(function (sum, xp) { return sum + xp; });
