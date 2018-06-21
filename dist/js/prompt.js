@@ -1,12 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var main_1 = require("./main");
+var translate_1 = require("./translate");
 var $lines = $('#prompt p');
 $lines.hide();
 var lineContents = new Array();
-function executeEvent(event) {
-    return events[event]();
-}
 var events = {
     step: 0,
     steps: 6,
@@ -102,6 +100,7 @@ $(function () {
         events[2]();
     }
     else {
+        translate_1.Transltr();
         terminal();
     }
     $('#forward').on('click', function () {

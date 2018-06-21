@@ -1,14 +1,10 @@
 import { Create } from "./main";
+import { Transltr } from "./translate";
 
 var $lines = $('#prompt p');
 $lines.hide();
 
 var lineContents = new Array();
-
-function executeEvent(event: string) {
-
-	return events[event]();
-}
 
 var events = {
 	step: 0,
@@ -151,6 +147,7 @@ $(function () {
 		events[2]();
 	} else {
 
+		Transltr();
 		terminal();
 	}
 
