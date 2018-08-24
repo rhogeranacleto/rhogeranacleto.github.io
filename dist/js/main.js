@@ -16,8 +16,6 @@ function Create() {
         var columnsContents = $('.column-content');
         $(columnsContents.get().reduce(function (e, i) { return e.offsetHeight > i.offsetHeight ? i : e; }, columnsContents.get(0))).append(card);
     });
-    var letterWidth = $('.bg', $('#content')).width();
-    var letterHeight = $('.bg', $('#content')).height();
     var count = Math.floor($(document).width() / 8) * ((Math.floor($('#content').height() / 20)) + 1);
     var string = '';
     for (var i = 0; i < count; i++) {
@@ -27,4 +25,4 @@ function Create() {
     $('.bg', $('#content')).html(string);
 }
 exports.Create = Create;
-console.log('What are search here? This code is public! Check out on https://github.com/rhogeranacleto/rhogeranacleto.github.io');
+console.log('What are you searching here? This code is public! Check out on https://github.com/rhogeranacleto/rhogeranacleto.github.io');

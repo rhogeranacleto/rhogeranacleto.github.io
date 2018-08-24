@@ -11,12 +11,6 @@ export function Create() {
 
 	$('.sum-xp', $('#card-languade-xp')).text(sumXP + ' XP');
 
-	// $.get('https://www.instagram.com/rhogeranacleto?__a=1').then(r => {
-
-	// var media = r.user.media.nodes[0];
-
-	// $('#card-instagram').find('img').attr('src', media.display_src).end().find('.caption>span').text(media.caption);
-
 	LANGUAGES.sort((a, b) => b.xp - a.xp);
 
 	LANGUAGES.forEach(language => {
@@ -34,9 +28,6 @@ export function Create() {
 		$(columnsContents.get().reduce((e, i) => e.offsetHeight > i.offsetHeight ? i : e, columnsContents.get(0))).append(card);
 	});
 
-	var letterWidth = $('.bg', $('#content')).width();
-	var letterHeight = $('.bg', $('#content')).height();
-
 	const count = Math.floor($(document).width() / 8) * ((Math.floor($('#content').height() / 20)) + 1);
 
 	var string = '';
@@ -50,4 +41,4 @@ export function Create() {
 	// });
 }
 
-console.log('What are search here? This code is public! Check out on https://github.com/rhogeranacleto/rhogeranacleto.github.io');
+console.log('What are you searching here? This code is public! Check out on https://github.com/rhogeranacleto/rhogeranacleto.github.io');
