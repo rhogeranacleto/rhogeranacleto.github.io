@@ -15,7 +15,7 @@ export const LANGUAGES = [{
 	class: ''
 }, {
 	name: 'NodeJS',
-	xp: 96,
+	xp: 100,
 	width: 0,
 	class: ''
 }, {
@@ -25,7 +25,7 @@ export const LANGUAGES = [{
 	class: ''
 }, {
 	name: 'TypeScript',
-	xp: 87,
+	xp: 100,
 	width: 0,
 	class: ''
 }, {
@@ -39,18 +39,28 @@ export const LANGUAGES = [{
 	width: 0,
 	class: ''
 }, {
+	name: 'VueJS',
+	xp: 20,
+	width: 0,
+	class: ''
+}, {
 	name: 'LESS',
-	xp: 70,
+	xp: 80,
+	width: 0,
+	class: ''
+}, {
+	name: 'SASS/SCSS',
+	xp: 80,
 	width: 0,
 	class: ''
 }, {
 	name: 'GIT',
-	xp: 90,
+	xp: 100,
 	width: 0,
 	class: ''
 }, {
 	name: 'SQL',
-	xp: 95,
+	xp: 100,
 	width: 0,
 	class: ''
 }, {
@@ -70,12 +80,12 @@ export const LANGUAGES = [{
 	class: ''
 }, {
 	name: 'MongoDB',
-	xp: 85,
+	xp: 95,
 	width: 0,
 	class: ''
 }, {
 	name: 'GraphQL',
-	xp: 20,
+	xp: 80,
 	width: 0,
 	class: ''
 }, {
@@ -96,6 +106,11 @@ export const LANGUAGES = [{
 }, {
 	name: 'shell',
 	xp: 20,
+	width: 0,
+	class: ''
+}, {
+	name: 'Gestão de projetos',
+	xp: 50,
 	width: 0,
 	class: ''
 }];
