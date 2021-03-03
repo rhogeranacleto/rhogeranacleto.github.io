@@ -1,0 +1,61 @@
+$A4-width: 21cm;
+$A4-height: 29.7cm;
+$cv-padding: 00cm;
+
+$main-color: #5c1fad;
+$secondary-color: #8542dd;
+
+#cv {
+  font-family: 'Baloo 2', cursive;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: $A4-width;
+  height: $A4-height;
+  margin: 0 auto;
+  padding: $cv-padding $cv-padding 0;
+  display: grid;
+  grid-template-columns: auto 4.5cm;
+
+  .header {
+    h1 {
+      margin: 0;
+      color: $main-color;
+      font-size: 1.2cm;
+      line-height: 1;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .avatar {
+    border-radius: 100%;
+    align-self: flex-end;
+    width: 3cm;
+  }
+
+  .body {
+    // display: grid;
+    // grid-template-columns: auto 4.5cm;
+  }
+
+  .stacks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    .stack {
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      padding: 0px 5px;
+      margin: 0 3px 3px 0;
+      // text-transform: uppercase;
+    }
+  }
+
+  .side {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,3 +1,44 @@
+html {
+  min-height: 100%;
+}
+
 body {
-  background-color: aquamarine;
+  // background-color: --bg-color;
+  // overflow: hidden;
+  // background: linear-gradient(315deg, #ec1c2c, transparent),
+  //   linear-gradient(to top left, #0c73a0, transparent),
+  //   linear-gradient(to top right, #ec4e3e, transparent);
+  // background: linear-gradient(148deg, #ec1c2c, transparent),
+  //   linear-gradient(266deg, #0c73a0, transparent),
+  //   linear-gradient(20deg, #ec4e3e, transparent);
+  // background-size: 400% 400%;
+  background-blend-mode: screen;
+  // animation: backgroundAnimation 10s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 57% 0%;
+  }
+  50% {
+    background-position: 44% 100%;
+  }
+  100% {
+    background-position: 57% 0%;
+  }
+}
+
+#root {
+  //   // overflow-x: hidden;
+  // overflow-y: scroll;
+  // position: absolute;
+  // perspective: 8px;
+  // perspective-origin: 0%;
+  // width: 100%;
+  // height: 100%;
+}
+
+.foreground {
+  transform-origin: 0;
+  transform: translateZ(0px);
 }
