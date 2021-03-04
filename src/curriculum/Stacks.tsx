@@ -1,9 +1,7 @@
 import React from 'react';
 
 export const Stack = ({ children }: { children: string }) => {
-  return (
-    <div className="stack">{children}</div>
-  );
+  return <div className="stack">{children}</div>;
 };
 
 export const Stacks = () => {

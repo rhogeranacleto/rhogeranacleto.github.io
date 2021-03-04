@@ -7,7 +7,6 @@ export const Background = () => {
   const [albums, setAlbums] = useState<IAlbum[]>([]);
 
   const getAlbums = async () => {
-
     const data = await getTopAlbums('rhogeranacleto', '4', '1month');
 
     setAlbums(data);
@@ -19,11 +18,13 @@ export const Background = () => {
 
   return (
     <div id="content">
-      <div className="background-images" id="background-images" >
+      <div className="background-images" id="background-images">
         {/* {albums.map(album => <div style={{
         backgroundImage: `url(${album.image[3]["#text"]})`
       }} >div</div>)} */}
-        {albums.map(album => <img src={album.image[3]["#text"]} key={album.name} className="" />)}
+        {albums.map((album) => (
+          <img src={album.image[3]['#text']} key={album.name} className="" />
+        ))}
       </div>
     </div>
   );

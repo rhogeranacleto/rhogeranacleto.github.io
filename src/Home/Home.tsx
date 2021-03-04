@@ -7,8 +7,9 @@ import { getTopAlbums } from '../services/get-top-albums';
 import './Home.scss';
 
 const setBackground = async (url: string) => {
-
-  const { Vibrant, LightVibrant, DarkVibrant } = await Vib.from(url).getPalette();
+  const { Vibrant, LightVibrant, DarkVibrant } = await Vib.from(
+    url,
+  ).getPalette();
 
   const style = document.createElement('style');
 
@@ -30,7 +31,7 @@ export const Home = () => {
 
     setAlbums(data);
 
-    setBackground(data[0].image[2]["#text"]);
+    setBackground(data[0].image[2]['#text']);
   };
 
   useEffect(() => {
@@ -57,7 +58,11 @@ export const Home = () => {
     <>
       {/* <Background height={height} /> */}
       <div className="foreground" ref={foreground}>
-        {albums.map(album => <p><img src={album.image[3]["#text"]} key={album.name} className="" /></p>)}
+        {albums.map((album) => (
+          <p>
+            <img src={album.image[3]['#text']} key={album.name} className="" />
+          </p>
+        ))}
       </div>
     </>
   );

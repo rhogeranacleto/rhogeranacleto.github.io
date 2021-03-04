@@ -1,9 +1,9 @@
-import React from 'react';
 import './locales';
-import './Curriculum.scss';
-import { Body } from './Body';
-import { Header } from './Header';
-import { Side } from './Side';
+import './curriculum.scss';
+import React from 'react';
+import { Body } from './body';
+import { Header } from './header';
+import { Side } from './side';
 
 export const Curriculum = () => (
   <div id="cv">
@@ -14,4 +14,3 @@ export const Curriculum = () => (
     <Side />
   </div>
 );
-

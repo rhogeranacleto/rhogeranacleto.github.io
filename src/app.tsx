@@ -9,9 +9,15 @@ export const App = () => {
     <Suspense fallback="loadding...">
       <Router>
         <Switch>
-          <Route path="/cv" ><Curriculum /></Route>
-          <Route path="/bg"><Background /></Route>
-          <Route><Home /></Route>
+          <Route path="/cv">
+            <Curriculum />
+          </Route>
+          <Route path="/bg">
+            <Background />
+          </Route>
+          <Route>
+            <Home />
+          </Route>
         </Switch>
       </Router>
     </Suspense>
