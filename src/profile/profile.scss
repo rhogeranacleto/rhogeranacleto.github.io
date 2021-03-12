@@ -1,0 +1,92 @@
+$A4-width: 21cm;
+$A4-height: 29.7cm;
+
+#profile {
+  width: $A4-width;
+  height: $A4-height;
+  margin: 0 auto;
+  $divider-width: 100px;
+
+  .jobs {
+    .job {
+      display: grid;
+      grid-template-columns: 1fr $divider-width 1fr;
+
+      .divider {
+        background-color: aqua;
+        display: grid;
+        position: relative;
+
+        .start {
+          align-self: flex-end;
+          justify-self: center;
+        }
+
+        .end,
+        .start {
+          z-index: 20;
+        }
+
+        .line {
+          $line-width: 10px;
+
+          position: absolute;
+          width: $line-width;
+          left: $divider-width / 2 - $line-width / 2;
+          background-color: #f1e05a;
+          height: 100%;
+          z-index: 2;
+        }
+      }
+
+      &:first-child {
+        .divider {
+          .line {
+            border-radius: 100px 100px 0 0;
+          }
+        }
+      }
+
+      &:last-child {
+        .divider {
+          .line {
+            border-radius: 0 0 100px 100px;
+          }
+        }
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        // border: 1px solid blueviolet;
+
+        div {
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+
+          $js: #f1e05a;
+          $rb: #701516;
+          $pg: #dad8d8;
+          $mongo: #459c45;
+
+          &.js {
+            background-color: $js;
+          }
+
+          &.rb {
+            background-color: $rb;
+          }
+
+          &.pg {
+            background-color: $pg;
+          }
+
+          &.mongo {
+            background-color: $mongo;
+          }
+        }
+      }
+    }
+  }
+}

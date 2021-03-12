@@ -15,7 +15,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint/eslint-plugin', 'import'],
   extends: [
-    // 'plugin:react/recommended',
+    'plugin:react/recommended',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
@@ -28,6 +28,8 @@ module.exports = {
     jest: true,
   },
   rules: {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     'semi': ['error', 'always'],
     'no-multiple-empty-lines': ['error', { max: 1 }],
     'no-import-assign': 'error',

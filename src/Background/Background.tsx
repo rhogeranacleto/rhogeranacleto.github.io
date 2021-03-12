@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { IAlbum } from '../interfaces';
 import { getTopAlbums } from '../services/get-top-albums';
 import './Background.scss';

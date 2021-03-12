@@ -1,14 +1,14 @@
 import Vib from 'node-vibrant';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Background } from '../Background/Background';
+import { useEffect, useRef, useState } from 'react';
 import { IAlbum } from '../interfaces';
 import { getTopAlbums } from '../services/get-top-albums';
 
 import './Home.scss';
 
 const setBackground = async (url: string) => {
-
-  const { Vibrant, LightVibrant, DarkVibrant } = await Vib.from(url).getPalette();
+  const { Vibrant, LightVibrant, DarkVibrant } = await Vib.from(
+    url,
+  ).getPalette();
 
   const style = document.createElement('style');
 
@@ -22,7 +22,7 @@ const setBackground = async (url: string) => {
 
 export const Home = () => {
   const [albums, setAlbums] = useState<IAlbum[]>([]);
-  const [height, setHeight] = useState(0);
+  const [, setHeight] = useState(0);
   const foreground = useRef<HTMLDivElement>(null);
 
   const getAlbums = async () => {
@@ -30,7 +30,7 @@ export const Home = () => {
 
     setAlbums(data);
 
-    setBackground(data[0].image[2]["#text"]);
+    setBackground(data[0].image[2]['#text']);
   };
 
   useEffect(() => {
@@ -57,7 +57,11 @@ export const Home = () => {
     <>
       {/* <Background height={height} /> */}
       <div className="foreground" ref={foreground}>
-        {albums.map(album => <p><img src={album.image[3]["#text"]} key={album.name} className="" /></p>)}
+        {albums.map((album) => (
+          <p>
+            <img src={album.image[3]['#text']} key={album.name} className="" />
+          </p>
+        ))}
       </div>
     </>
   );

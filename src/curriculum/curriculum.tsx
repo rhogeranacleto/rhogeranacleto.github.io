@@ -1,4 +1,3 @@
-import React from 'react';
 import './locales';
 import './Curriculum.scss';
 import { Body } from './Body';
