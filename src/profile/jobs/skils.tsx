@@ -1,4 +1,6 @@
 import * as d3 from 'd3';
+// @ts-ignore
+import { voronoiMapSimulation } from 'd3-voronoi-map';
 import { useEffect, useRef } from 'react';
 
 enum IColor {
@@ -35,6 +37,24 @@ const create3 = (element: SVGSVGElement, skills: { [key: string]: number }) => {
     .reduce((total, value) => total + value, 0);
 
   console.log(total);
+
+  const radialLineGenerator = d3.lineRadial();
+
+  const points: [number, number][] = [
+    [0, 80],
+    [Math.PI * 0.25, 80],
+    [Math.PI * 0.5, 30],
+    [Math.PI * 0.75, 80],
+    [Math.PI, 80],
+    [Math.PI * 1.25, 80],
+    [Math.PI * 1.5, 80],
+    [Math.PI * 1.75, 80],
+    [Math.PI * 2, 80],
+  ];
+
+  const path = radialLineGenerator(points) as string;
+
+  d3.select(element).append('path').attr('d', path);
 
   const nodes: IJJJJ[] = Object.entries(skills).map(([key, value]) => ({
     radius: (value / total) * 170,
