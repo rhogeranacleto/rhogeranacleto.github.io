@@ -1,0 +1,98 @@
+$solar-system-size: 300px;
+
+$sun-ration: 1;
+$solar-station-ration: 0.1;
+
+$sun-size: $sun-ration * $solar-system-size;
+$solar-station-size: $solar-station-ration * $solar-system-size;
+
+.background {
+  background-color: rgb(11, 11, 24);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  @mixin positioning($size) {
+    width: $size;
+    height: $size;
+    top: calc(50% - ($size / 2));
+    left: calc(50% - ($size / 2));
+  }
+
+  @mixin rotate-itself($time) {
+    @keyframes rotate-iteself {
+      from{
+        transform: rotate(0);
+      }
+      to{
+        transform: rotate(360deg);
+      }
+    }
+
+    animation: rotate-iteself linear $time infinite;
+  }
+
+  @mixin rotate-around($time, $y) {
+    @keyframes rotate-around {
+      from{
+        transform: rotate(0) translatey($y);
+      }
+      to{
+        transform: rotate(360deg) translatey($y);
+      }
+    }
+
+    animation: rotate-around linear $time infinite;
+  }
+
+  .world {
+    img {
+      position: fixed;
+    }
+
+    &.sun {
+      img {
+        &:first-child {
+          @include positioning($sun-size);
+          @include rotate-itself(50s);
+        }
+
+        &:last-child{
+          @include positioning($solar-station-size);
+          @include rotate-around(8s, -($sun-size / 1.8));
+        }
+      }
+    }
+
+    &.hourglass-twin{
+      // position: fixed;
+      // @include positioning(00px);
+      // @include rotate-itself(20s);
+
+      .hourglass-twin-planet{
+        @include rotate-itself(20s);
+      }
+
+      img {
+        &:first-child {
+          // @include positioning(100px);
+          transform: translateX(-60px);
+        }
+
+        &:nth-child(2){
+          // @include positioning(100px);
+        }
+
+        &:last-child {
+          // @include positioning(100px);
+          transform: translateX(60px);
+        }
+      }
+    }
+  }
+
+  img {
+    width: 50px;
+  }
+}
+
