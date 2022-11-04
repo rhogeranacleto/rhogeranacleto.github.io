@@ -19,7 +19,7 @@
 		"@types/jquery": "^3.3.0",
 		"@types/mustache": "0.8.30",
 		"browserify": "^16.1.0",
-		"gulp": "^3.9.1",
+		"gulp": "^4.0.2",
 		"gulp-connect": "^5.2.0",
 		"gulp-less": "^3.5.0",
 		"gulp-typescript": "^4.0.1",
