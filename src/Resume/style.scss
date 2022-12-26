@@ -1,0 +1,81 @@
+#resume {
+  width: 21cm;
+
+  @mixin columns {
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+
+    &::after {
+      content: '';
+      width: 0.1cm;
+      flex: 1;
+      background-color: #000;
+      box-sizing: border-box;
+    }
+
+    img {
+      border-radius: 100%;
+    }
+  }
+
+  & >  header {
+    @include columns();
+
+    &::before {
+      content: '';
+    }
+
+    img {
+      width: 4cm;
+    }
+  }
+
+  &>section {
+    @include columns();
+
+    &::before {
+      content: '';
+    }
+
+    figure::after {
+      background: linear-gradient(180deg, #a3958a 0%, #5dfff0 100%);
+    }
+  }
+
+  main {
+    section {
+      @include columns();
+
+      img {
+        width: 2cm;
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      $colors-gradients: #5dfff0, #32196a, #272727, #0084c9;
+
+      @each $color in $colors-gradients {
+        $i: index($list: $colors-gradients, $value: $color);
+        $next-color: $color;
+
+        @if $i < length($list: $colors-gradients) {
+          $next-color: nth($list: $colors-gradients, $n: $i + 1);
+        }
+
+        &:nth-child(#{$i}) figure::after {
+          background: linear-gradient(180deg, $color 0%, $next-color 100%);
+        }
+      }
+    }
+  }
+
+}

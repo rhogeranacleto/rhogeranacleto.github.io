@@ -18,19 +18,34 @@ import whiteHole from './outer-wilds-assets/white-hole.png';
 
 export const Background = () => {
   return <div className='background'>
-    <div className='world sun'><img src={sun} /><img src={solarStation} /></div>
-    <div className='world hourglass-twin'>
+    <div className='orbit sun'>
+      <img src={sun} />
+      <img src={solarStation} />
+    </div>
+    <div className='orbit hourglass-twin'>
       <div className='hourglass-twin-planet'>
-      <img src={ashTwin} />
-      <img src={hourglassTwinSand} />
-      <img src={emberTwin} />
-
+        <img src={ashTwin} />
+        <img src={hourglassTwinSand} />
+        <img src={emberTwin} />
       </div>
     </div>
-    <div className='world timber-hearth'><img src={timberHearth} /><img src={attlerock} /></div>
-    <div className='world brittle-hollow'><img src={brittleHollow} /><img src={hollowsLantern} /></div>
-    <div className='world giants-deep'><img src={giantsDeep} /><img src={orbitalProbeCannon} /></div>
-    <div className='world dark-bramble'><img src={darkBramble} /></div>
+    <div className='orbit timber-hearth'>
+      <div className='timber-hearth-planet'>
+        <img src={timberHearth} />
+        <img src={attlerock} />
+      </div>
+    </div>
+    <div className='orbit brittle-hollow'>
+      <img src={brittleHollow} />
+      <img src={hollowsLantern} />
+    </div>
+    <div className='orbit giants-deep'>
+      <img src={giantsDeep} />
+      <img src={orbitalProbeCannon} />
+    </div>
+    <div className='orbit dark-bramble'>
+      <img src={darkBramble} />
+    </div>
 
 
 

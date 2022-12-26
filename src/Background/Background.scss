@@ -1,10 +1,4 @@
-$solar-system-size: 300px;
-
-$sun-ration: 1;
-$solar-station-ration: 0.1;
-
-$sun-size: $sun-ration * $solar-system-size;
-$solar-station-size: $solar-station-ration * $solar-system-size;
+$solar-system-size: 10pc;
 
 .background {
   background-color: rgb(11, 11, 24);
@@ -12,12 +6,18 @@ $solar-station-size: $solar-station-ration * $solar-system-size;
   width: 100%;
   height: 100%;
 
-  @mixin positioning($size) {
+  @mixin positioning2($size) {
     width: $size;
     height: $size;
     top: calc(50% - ($size / 2));
     left: calc(50% - ($size / 2));
   }
+
+  // @mixin positioning($size) {
+  //   width: $size;
+  //   height: $size;
+  //   top: calc(50% - );
+  // }
 
   @mixin rotate-itself($time) {
     @keyframes rotate-iteself {
@@ -45,47 +45,84 @@ $solar-station-size: $solar-station-ration * $solar-system-size;
     animation: rotate-around linear $time infinite;
   }
 
-  .world {
+  .orbit {
     img {
       position: fixed;
     }
 
     &.sun {
+      $sun-size: 1 * $solar-system-size;
+      $solar-station-size: 0.1 * $solar-system-size;
+
       img {
         &:first-child {
-          @include positioning($sun-size);
+          @include positioning2($sun-size);
           @include rotate-itself(50s);
         }
 
         &:last-child{
-          @include positioning($solar-station-size);
-          @include rotate-around(8s, -($sun-size / 1.8));
+          @include positioning2($solar-station-size);
+          @include rotate-around(8s, -($sun-size / 3));
         }
       }
     }
 
     &.hourglass-twin{
-      // position: fixed;
-      // @include positioning(00px);
-      // @include rotate-itself(20s);
+      $hourglass-twin-orbit-size: 1.6 * $solar-system-size;
 
-      .hourglass-twin-planet{
+      position: fixed;
+      @include positioning2($hourglass-twin-orbit-size);
+      @include rotate-itself(20s);
+
+      .hourglass-twin-planet {
+        width: 140px;
+        height: 65px;
+
         @include rotate-itself(20s);
       }
 
       img {
+        $ash-twin-size: 0.23 * $solar-system-size;
+        $ember-twin-size: 0.16 * $solar-system-size;
+
         &:first-child {
-          // @include positioning(100px);
-          transform: translateX(-60px);
+          width: $ash-twin-size;
         }
 
         &:nth-child(2){
-          // @include positioning(100px);
+          width: $ember-twin-size;
+          transform: translate(95%, 230%);
         }
 
-        &:last-child {
-          // @include positioning(100px);
-          transform: translateX(60px);
+        &:nth-child(3) {
+          width: $ember-twin-size;
+          transform: translate(175%, 20%);
+        }
+      }
+    }
+
+    &.timber-hearth{
+      position: fixed;
+
+      @include positioning2(650px);
+
+      .timber-hearth-planet{
+        position: relative;
+
+        width: 70px;
+      }
+
+      img{
+        position: absolute;
+
+        &:first-child{
+          @include positioning2(70px);
+          @include rotate-itself(10s)
+        }
+
+        &:nth-child(2) {
+          @include positioning2(40px);
+          @include rotate-around(8s, 70px)
         }
       }
     }
