@@ -9,7 +9,8 @@ import Home from '../routes/home';
 import Profile from '../routes/profile';
 
 const techs = {
-  react: '',
+  react:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
 };
 
 const jobs = [
@@ -59,11 +60,13 @@ const jobs = [
           's compliance team, where I implemented the{' '}
           <a href="https://securiti.ai/what-is-lgpd/">LGPD</a> laws on their
           application. It was a challenging and fulfilling experience to
-          collaborate with other product teams within a strict timeline. Another
-          project I led was Daleponto, which started as an internal solution but
-          later grew into a product that other companies were interested in. As
-          the head leader of a small team, I managed the product as an
-          independent entity.
+          collaborate with other product teams within a strict timeline.
+        </p>
+        <p>
+          Another project I led was Daleponto, which started as an internal
+          solution but later grew into a product that other companies were
+          interested in. As the head leader of a small team, I managed the
+          product as an independent entity.
         </p>
         <p>
           Furthermore, I was also part of the recruitment team responsible for
@@ -156,55 +159,73 @@ const getPeriod = ([start, end]: Date[]) => {
 const App = () => (
   <div
     id="app"
-    className="grid grid-cols-7 m-auto max-w-screen-lg gap-10 mt-10"
+    className="grid grid-cols-7 m-auto max-w-screen-lg gap-10 mt-10 text-sm"
   >
     <aside className="col-span-2">
-      <header className="text-right">
-        <img src="../assets/profile.jpeg" className="rounded-full mb-10" />
+      <header className="text-right flex flex-col">
+        <img
+          src="../assets/profile.jpeg"
+          className="rounded-full mb-10 w-48 self-end"
+        />
         <p>
-          Hello! My name is <h1 className="text-3xl">Rhoger Anacleto</h1> I'm 26
-          years old and I am a{' '}
-          <h2 className="text-xl">
+          Hello! My name is{' '}
+          <a href="/" className="text-3xl whitespace-nowrap">
+            Rhoger Anacleto
+          </a>{' '}
+          I'm <span className="bg-slate-200">26 years</span> old and I am a{' '}
+          <span className="bg-slate-200">
             Software Enginner with 9+ years of experience
-          </h2>
+          </span>
         </p>
-        <p className="mt-5">
-          I currently live in Florianópolis, Brazil, and I work remotely for an
-          outsourcing called <a href="https://www.zartis.com/">Zartis</a> in
-          Spain
+        <p>
+          I currently live in{' '}
+          <a href="https://www.google.com/search?q=florianopolis&oq=florianopolis&aqs=chrome..69i57j46i512j46i175i199i512j0i512l6.3601j0j4&sourceid=chrome&ie=UTF-8">
+            Florianópolis, Brazil
+          </a>
+          , and I work remotely for an outsourcing called{' '}
+          <a href="https://www.zartis.com/">Zartis</a> in Spain
         </p>
-        <p className="mt-5">
+        <p>
           You can find me at my email{' '}
           <a href="mailto:rhogeranacleto@gmail.com">rhogeranacleto@gmail.com</a>
-          , or my phone number is{' '}
-          <a href="tel:+5547996775457">+5547996775457</a>, or in one of the
-          following social medias:{' '}
+          , my phone number is <a href="tel:+5547996775457">+5547996775457</a>,
+          and my social medias are:{' '}
           <a href="https://www.linkedin.com/in/rhogeranacleto/">Linkedin</a>,{' '}
           <a href="https://www.instagram.com/rhogeranacleto/">Instagram</a>,{' '}
           <a href="https://github.com/rhogeranacleto">Github</a>
+        </p>
+        <p>
+          I speak fluent <span className="bg-slate-200">Portuguese</span> and{' '}
+          <span className="bg-slate-200">English</span>. Pero yo ha aprendido un
+          poquito de <span className="bg-slate-200">Español</span>,{' '}
+          <span className="bg-slate-200">Français</span> y{' '}
+          <span className="bg-slate-200">Deutsch</span>
         </p>
       </header>
     </aside>
     <main className="col-span-5">
       <section>
-        <h1 className="text-2xl mb-10">Experience</h1>
+        <h1 className="text-2xl mb-8">Experience</h1>
         {jobs.map((job) => (
-          <article key={job.company.text} className="mt-5">
-            <header className="mb-5">
+          <article key={job.company.text} className="mt-10">
+            <header className="mb-6">
               <h1>
                 <a className="text-3xl" href={job.company.url}>
                   {job.company.text}
                 </a>
               </h1>
-
-              <sub>{getPeriod(job.period)}</sub>
-
-              <sub>{job.location}</sub>
+              <sub>
+                during {getPeriod(job.period)} in {job.location}
+              </sub>
             </header>
-            {job.content}
-            {job.techs?.map((tech) => (
-              <code key={tech}>{tech}</code>
-            ))}
+            <main>{job.content}</main>
+            <footer className="flex gap-3 my-5">
+              {job.techs?.map((tech) => (
+                <code key={tech} className="bg-slate-200 flex items-center">
+                  {tech}
+                </code>
+              ))}
+            </footer>
           </article>
         ))}
       </section>
@@ -226,17 +247,19 @@ const App = () => (
               url: 'https://sc.senai.br/',
             },
             title: 'Computer Technician',
-            period: [new Date(2012, 0), new Date(2013, 0)],
+            period: [new Date(2012, 0), new Date(2014, 0)],
             location: 'Joinville, Brazil',
           },
         ].map((education) => (
-          <article key={education.institution.text}>
+          <article key={education.institution.text} className="mt-6">
             <a className="text-3xl" href={education.institution.url}>
-              {education.institution.text}
+              <h1 className="mb-5">{education.institution.text}</h1>
             </a>
-            <div>{education.title}</div>
-            {getPeriod(education.period)}
-            <div>{education.location}</div>
+            <h2>{education.title}</h2>
+
+            <sub>
+              during {getPeriod(education.period)} in {education.location}
+            </sub>
           </article>
         ))}
       </section>
