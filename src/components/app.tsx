@@ -171,17 +171,17 @@ const getPeriod = ([start, end]: Date[]) => {
 const App = () => (
   <div
     id="app"
-    className="grid grid-cols-7 m-auto max-w-screen-lg md:mx-16 mx-5 gap-10 mt-10 text-sm"
+    className="grid grid-cols-9 lg:mx-auto max-w-screen-lg md:mx-16 mx-5 gap-10 mt-10 print:mt-0 text-sm"
   >
-    <aside className="lg:col-span-2 col-span-7">
-      <header className="lg:text-right text-center flex flex-col">
+    <aside className="lg:col-span-3 print:col-span-3 col-span-9">
+      <header className="lg:text-right print:text-right text-center flex flex-col">
         <img
           src="../assets/profile.jpeg"
           className="rounded-full mb-6 sm:w-48 w-32 lg:self-end self-center"
         />
         <p>
           Hello! My name is{' '}
-          <a href="/" className="text-2xl whitespace-nowrap">
+          <a href="/" className="md:text-xl text-lg whitespace-nowrap">
             Rhoger Anacleto
           </a>{' '}
           I'm <span className="bg-slate-200">26 years</span> old and I am a{' '}
@@ -214,17 +214,24 @@ const App = () => (
           <span className="bg-slate-200">Français</span> y{' '}
           <span className="bg-slate-200">Deutsch</span>
         </p>
+        <p>
+          I like{' '}
+          <a href="https://www.instagram.com/rhogeranacleto/">photography</a>,
+          listen to all kinds of{' '}
+          <a href="https://www.last.fm/pt/user/rhogeranacleto">music</a> (I know
+          some of them are really weird), and playing indie games on my xbox
+        </p>
       </header>
     </aside>
-    <main className="lg:col-span-5 col-span-7">
+    <main className="lg:col-span-6 print:col-span-6 col-span-9">
       <section>
-        <h1 className="text-xl border-b-purple-200 border-b-2 border-solid mb-8">
+        <h1 className="text-xl border-b-purple-100 border-b-2 border-solid mb-8">
           Professional experience
         </h1>
         {jobs.map((job) => (
           <article
             key={job.company.text}
-            className="mt-5 border-b-slate-100 border-b-2 border-solid last:border-none"
+            className="mt-5 border-b-slate-100 border-b-2 border-solid last:border-none break-inside-avoid-page"
           >
             <header className="mb-6">
               <h1>
@@ -250,8 +257,8 @@ const App = () => (
           </article>
         ))}
       </section>
-      <section>
-        <h1 className="text-xl my-10 border-b-purple-200 border-b-2 border-solid">
+      <section className="break-inside-avoid-page">
+        <h1 className="text-xl my-10 border-b-purple-100 border-b-2 border-solid">
           Education
         </h1>
         {[

@@ -520,8 +520,8 @@ video {
   grid-column: span 7 / span 7;
 }
 
-.m-auto {
-  margin: auto;
+.col-span-9 {
+  grid-column: span 9 / span 9;
 }
 
 .mx-5 {
@@ -555,12 +555,12 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .block {
@@ -588,8 +588,16 @@ video {
   max-width: 1024px;
 }
 
+.break-inside-avoid-page {
+  break-inside: avoid-page;
+}
+
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-cols-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -642,6 +650,11 @@ video {
   border-bottom-color: rgb(241 245 249 / var(--tw-border-opacity));
 }
 
+.border-b-purple-100 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(243 232 255 / var(--tw-border-opacity));
+}
+
 .bg-slate-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
@@ -666,10 +679,22 @@ video {
   line-height: 1.75rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 body {
   overflow-x: hidden;
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+
+@media print {
+  body {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
 }
 
 a {
@@ -704,6 +729,37 @@ aside > header > p {
   border-style: none;
 }
 
+@media print {
+  .print\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .print\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .print\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .print\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .print\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .print\:text-right {
+    text-align: right;
+  }
+
+  .print\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:w-48 {
     width: 12rem;
@@ -719,6 +775,16 @@ aside > header > p {
   .md\:flex-nowrap {
     flex-wrap: nowrap;
   }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -730,15 +796,24 @@ aside > header > p {
     grid-column: span 5 / span 5;
   }
 
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .lg\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .lg\:self-end {
     align-self: flex-end;
   }
 
   .lg\:text-right {
     text-align: right;
-  }
-
-  .lg\:text-justify {
-    text-align: justify;
   }
 }
