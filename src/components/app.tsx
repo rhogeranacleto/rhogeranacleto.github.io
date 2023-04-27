@@ -15,7 +15,10 @@ const techs = {
 
 const jobs = [
   {
-    company: { text: 'Zartis', url: 'https://www.zartis.com/' },
+    company: {
+      text: 'Software Engineer @ Zartis',
+      url: 'https://www.zartis.com/',
+    },
     period: [new Date(2021, 5)],
     location: 'Spain / Remote',
     content: (
@@ -39,10 +42,13 @@ const jobs = [
         </p>
       </>
     ),
-    techs: ['typescript', 'react', 'tailwindcss', 'jest', '.Net', 'Cypress'],
+    techs: ['typescript', 'react', 'tailwindcss', 'jest', '.Net', 'playwright'],
   },
   {
-    company: { text: 'Magrathea', url: 'https://magrathealabs.com/' },
+    company: {
+      text: 'Software Engineer @ Magrathea',
+      url: 'https://magrathealabs.com/',
+    },
     period: [new Date(2019, 3), new Date(2021, 5)],
     location: 'Joinville, Brazil',
     content: (
@@ -86,7 +92,10 @@ const jobs = [
     ],
   },
   {
-    company: { text: 'Sofit', url: 'https://www.sofit4.com.br/' },
+    company: {
+      text: 'Software Engineer @ Sofit',
+      url: 'https://www.sofit4.com.br/',
+    },
     period: [new Date(2016, 9), new Date(2019, 3)],
     location: 'Joinville, Brazil',
     content: (
@@ -121,7 +130,10 @@ const jobs = [
     ],
   },
   {
-    company: { text: 'Softin Sistemas', url: 'https://softin.com.br/' },
+    company: {
+      text: 'Frontend Engineer @ Softin Sistemas',
+      url: 'https://softin.com.br/',
+    },
     period: [new Date(2014, 1), new Date(2016, 9)],
     location: 'Joinville, Brazil',
     content: (
@@ -159,23 +171,24 @@ const getPeriod = ([start, end]: Date[]) => {
 const App = () => (
   <div
     id="app"
-    className="grid grid-cols-7 m-auto max-w-screen-lg gap-10 mt-10 text-sm"
+    className="grid grid-cols-7 m-auto max-w-screen-lg md:mx-16 mx-5 gap-10 mt-10 text-sm"
   >
-    <aside className="col-span-2">
-      <header className="text-right flex flex-col">
+    <aside className="lg:col-span-2 col-span-7">
+      <header className="lg:text-right text-center flex flex-col">
         <img
           src="../assets/profile.jpeg"
-          className="rounded-full mb-10 w-48 self-end"
+          className="rounded-full mb-6 sm:w-48 w-32 lg:self-end self-center"
         />
         <p>
           Hello! My name is{' '}
-          <a href="/" className="text-3xl whitespace-nowrap">
+          <a href="/" className="text-2xl whitespace-nowrap">
             Rhoger Anacleto
           </a>{' '}
           I'm <span className="bg-slate-200">26 years</span> old and I am a{' '}
-          <span className="bg-slate-200">
-            Software Enginner with 9+ years of experience
-          </span>
+          <span className="bg-slate-200 whitespace-nowrap">
+            Software Enginner
+          </span>{' '}
+          with 9+ years of experience
         </p>
         <p>
           I currently live in{' '}
@@ -203,14 +216,19 @@ const App = () => (
         </p>
       </header>
     </aside>
-    <main className="col-span-5">
+    <main className="lg:col-span-5 col-span-7">
       <section>
-        <h1 className="text-2xl mb-8">Experience</h1>
+        <h1 className="text-xl border-b-purple-200 border-b-2 border-solid mb-8">
+          Professional experience
+        </h1>
         {jobs.map((job) => (
-          <article key={job.company.text} className="mt-10">
+          <article
+            key={job.company.text}
+            className="mt-5 border-b-slate-100 border-b-2 border-solid last:border-none"
+          >
             <header className="mb-6">
               <h1>
-                <a className="text-3xl" href={job.company.url}>
+                <a className="text-2xl" href={job.company.url}>
                   {job.company.text}
                 </a>
               </h1>
@@ -219,9 +237,12 @@ const App = () => (
               </sub>
             </header>
             <main>{job.content}</main>
-            <footer className="flex gap-3 my-5">
+            <footer className="flex gap-3 my-5 md:flex-nowrap flex-wrap">
               {job.techs?.map((tech) => (
-                <code key={tech} className="bg-slate-200 flex items-center">
+                <code
+                  key={tech}
+                  className="bg-slate-200 flex items-center whitespace-nowrap"
+                >
                   {tech}
                 </code>
               ))}
@@ -230,12 +251,15 @@ const App = () => (
         ))}
       </section>
       <section>
-        <h1 className="text-2xl my-10">Education</h1>
+        <h1 className="text-xl my-10 border-b-purple-200 border-b-2 border-solid">
+          Education
+        </h1>
         {[
           {
             institution: {
-              text: 'UDESC - University of State of Santa Catarina',
-              url: 'https://www.udesc.br/',
+              name: 'UDESC',
+              long: 'University of State of Santa Catarina',
+              url: 'https://www.udesc.br/international',
             },
             title: 'Bachalor in System Analisys and Development',
             period: [new Date(2014, 0), new Date(2018, 0)],
@@ -243,7 +267,8 @@ const App = () => (
           },
           {
             institution: {
-              text: 'SENAI - National School of Industrial Learning',
+              name: 'SENAI',
+              long: 'National School of Industrial Learning',
               url: 'https://sc.senai.br/',
             },
             title: 'Computer Technician',
@@ -251,15 +276,24 @@ const App = () => (
             location: 'Joinville, Brazil',
           },
         ].map((education) => (
-          <article key={education.institution.text} className="mt-6">
-            <a className="text-3xl" href={education.institution.url}>
-              <h1 className="mb-5">{education.institution.text}</h1>
+          <article key={education.institution.name} className="mt-6">
+            <a
+              className="text-2xl w-fit block"
+              href={education.institution.url}
+            >
+              <h1 className="mb-5 w-fit">
+                {education.title} @ {education.institution.name}
+              </h1>
             </a>
-            <h2>{education.title}</h2>
-
-            <sub>
-              during {getPeriod(education.period)} in {education.location}
-            </sub>
+            <p>
+              This graduation was on{' '}
+              <a href={education.institution.url}>
+                {education.institution.long}
+              </a>{' '}
+              starting on {education.period[0].getFullYear()} and graduating on{' '}
+              {education.period[1].getFullYear()}, lasting{' '}
+              {getPeriod(education.period)} in {education.location}
+            </p>
           </article>
         ))}
       </section>

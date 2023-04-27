@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply overflow-x-hidden bg-neutral-50;
+}
+
 a {
-  @apply relative whitespace-nowrap;
+  @apply relative lg:whitespace-nowrap;
 }
 
 a::after {
