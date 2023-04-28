@@ -171,7 +171,7 @@ const getPeriod = ([start, end]: Date[]) => {
 const App = () => (
   <div
     id="app"
-    className="grid grid-cols-9 lg:mx-auto max-w-screen-lg md:mx-16 mx-5 gap-10 mt-10 print:mt-0 text-sm"
+    className="grid grid-cols-9 lg:mx-auto max-w-screen-lg md:mx-16 mx-5 gap-10 my-10 print:mt-0 text-sm"
   >
     <aside className="lg:col-span-3 print:col-span-3 col-span-9">
       <header className="lg:text-right print:text-right text-center flex flex-col">
@@ -219,7 +219,7 @@ const App = () => (
           <a href="https://www.instagram.com/rhogeranacleto/">photography</a>,
           listen to all kinds of{' '}
           <a href="https://www.last.fm/pt/user/rhogeranacleto">music</a> (I know
-          some of them are really weird), and playing indie games on my xbox
+          some of them are really weird), and playing indie games on xbox
         </p>
       </header>
     </aside>
@@ -234,11 +234,12 @@ const App = () => (
             className="mt-5 border-b-slate-100 border-b-2 border-solid last:border-none break-inside-avoid-page"
           >
             <header className="mb-6">
-              <h1>
-                <a className="text-2xl" href={job.company.url}>
-                  {job.company.text}
-                </a>
-              </h1>
+              <a
+                className="md:text-2xl w-fit text-xl block"
+                href={job.company.url}
+              >
+                <h1 className="w-fit">{job.company.text}</h1>
+              </a>
               <sub>
                 during {getPeriod(job.period)} in {job.location}
               </sub>
@@ -269,7 +270,7 @@ const App = () => (
               url: 'https://www.udesc.br/international',
             },
             title: 'Bachalor in System Analisys and Development',
-            period: [new Date(2014, 0), new Date(2018, 0)],
+            period: [new Date(2014, 2), new Date(2018, 6)],
             location: 'Joinville, Brazil',
           },
           {
@@ -279,13 +280,13 @@ const App = () => (
               url: 'https://sc.senai.br/',
             },
             title: 'Computer Technician',
-            period: [new Date(2012, 0), new Date(2014, 0)],
+            period: [new Date(2012, 0), new Date(2013, 11)],
             location: 'Joinville, Brazil',
           },
         ].map((education) => (
           <article key={education.institution.name} className="mt-6">
             <a
-              className="text-2xl w-fit block"
+              className="md:text-2xl text-xl w-fit block"
               href={education.institution.url}
             >
               <h1 className="mb-5 w-fit">
@@ -303,6 +304,87 @@ const App = () => (
             </p>
           </article>
         ))}
+      </section>
+      <section>
+        <h1 className="text-xl my-10 border-b-purple-100 border-b-2 border-solid">
+          My skills
+        </h1>
+        <article className="mt-6 grid grid-cols-2 gap-10">
+          <h1 className="text-lg w-fit">
+            {' '}
+            I can <span className="bg-purple-200">work</span> and{' '}
+            <span className="bg-purple-200">help</span> other people with
+          </h1>
+          <p className="flex gap-3 flex-wrap items-baseline">
+            {[
+              'typescript',
+              'javascript',
+              'react',
+              'html',
+              'css',
+              'unit tests',
+              'e2e tests',
+              'Cypress',
+              'NestJS',
+              'Photoshop',
+              'SQL',
+              'MongoDB',
+              'Shell',
+            ].map((tech) => (
+              <code
+                key={tech}
+                className="bg-slate-200 flex items-center whitespace-nowrap"
+              >
+                {tech}
+              </code>
+            ))}
+          </p>
+          <div className="col-span-2 border-b-slate-100 border-b-2 border-solid w-3/4 mx-auto" />
+          <h1 className="text-lg w-fit">
+            With a <span className="bg-purple-200">little help</span> I can work
+            with{' '}
+          </h1>
+          <p className="flex gap-3 flex-wrap">
+            {[
+              'VueJS',
+              'Angular',
+              'Ruby',
+              'Python',
+              '.Net',
+              'C#',
+              'DevOps',
+              'Redis',
+            ].map((tech) => (
+              <code
+                key={tech}
+                className="bg-slate-200 flex items-center whitespace-nowrap"
+              >
+                {tech}
+              </code>
+            ))}
+          </p>
+          <div className="col-span-2 border-b-slate-100 border-b-2 border-solid w-3/4 mx-auto" />
+          <h1 className="mb-5 text-lg w-fit">
+            I have <span className="bg-purple-200">interest</span> in and want
+            an opportunity to <span className="bg-purple-200">learn</span> and
+            work with
+          </h1>
+          <p className="flex gap-3 flex-wrap">
+            {[
+              'Game Development (Unity)',
+              'Microsservices',
+              'Golang',
+              'Machine Learning / A.I.',
+            ].map((tech) => (
+              <code
+                key={tech}
+                className="bg-slate-200 flex items-center whitespace-nowrap"
+              >
+                {tech}
+              </code>
+            ))}
+          </p>
+        </article>
       </section>
     </main>
   </div>
