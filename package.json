@@ -9,7 +9,8 @@
     "tw": "npx tailwindcss -i ./src/style/tailwind.css -o ./src/style/index.css --watch",
     "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider preact watch",
     "lint": "eslint src",
-    "test": "jest"
+    "test": "jest",
+    "build:gh": "GITHUB_PAGES=rhogeranacleto.github.io preact build && dot-json ./build/manifest.json start_url \"/rhogeranacleto.github.io/\""
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -32,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "cross-env": "^7.0.3",
+    "dot-json": "^1.2.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-preact-pure": "^4.0.1",
     "eslint": "^8.20.0",

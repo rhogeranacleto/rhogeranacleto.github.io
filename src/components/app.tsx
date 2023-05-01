@@ -311,7 +311,6 @@ const App = () => (
         </h1>
         <article className="mt-6 grid grid-cols-2 gap-10">
           <h1 className="text-lg w-fit">
-            {' '}
             I can <span className="bg-purple-200">work</span> and{' '}
             <span className="bg-purple-200">help</span> other people with
           </h1>

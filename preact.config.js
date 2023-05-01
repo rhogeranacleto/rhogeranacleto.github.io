@@ -1,17 +1,18 @@
-import tailwindcss from 'tailwindcss';
-import postcssCustomMedia from 'postcss-custom-media';
+export default {
+  webpack(config, env, helpers) {
 
-console.log('aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa')
+    const publicPath = process.env.GITHUB_PAGES
+      ? `/${process.env.GITHUB_PAGES}/`
+      : '/';
+    const ghEnv = process.env.GITHUB_PAGES
+      && JSON.stringify(`${process.env.GITHUB_PAGES}`);
 
-export default function(config, env, helpers) {
+    config.output.publicPath = publicPath;
+    const { plugin } = helpers.getPluginsByName(config, 'DefinePlugin')[0];
+    Object.assign(
+      plugin.definitions,
+      { 'process.env.GITHUB_PAGES': ghEnv }
+    );
 
-  const postCssLoaders = helpers.getLoadersByName(config, 'postcss-loader');
-  postCssLoaders.forEach(({ loader }) => {
-    const plugins = loader.options.plugins;
-
-    // Add tailwind css at the top.
-    plugins.unshift(tailwindcss);
-  });
-
-  return config;
-}
+  },
+};
