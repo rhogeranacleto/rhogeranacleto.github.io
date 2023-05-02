@@ -1,288 +1,514 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rhoger Anacleto</title>
+    <meta name="description" content="Rhoger Anacleto, personal website" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="profile.jpeg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="profile.jpeg" />
+  </head>
+  <body>
+    <div
+      id="app"
+      class="grid grid-cols-9 lg:mx-auto max-w-screen-lg md:mx-16 mx-5 gap-10 my-10 print:mt-0 text-sm"
+    >
+      <aside class="lg:col-span-3 print:col-span-3 col-span-9">
+        <header
+          class="lg:text-right print:text-right text-center flex flex-col"
+        >
+          <img
+            src="./profile.jpeg"
+            class="rounded-full mb-6 sm:w-48 w-32 lg:self-end self-center"
+          />
+          <p>
+            Hello! My name is
+            <a href="/" class="md:text-xl text-lg whitespace-nowrap">
+              Rhoger Anacleto
+            </a>
+            I'm <span class="bg-slate-200">26 years</span> old and I am a
+            <span class="bg-slate-200 whitespace-nowrap">
+              Software Enginner
+            </span>
+            with 9+ years of experience
+          </p>
+          <p>
+            I currently live in
+            <a
+              href="https://www.google.com/search?q=florianopolis&oq=florianopolis&aqs=chrome..69i57j46i512j46i175i199i512j0i512l6.3601j0j4&sourceid=chrome&ie=UTF-8"
+            >
+              Florianópolis, Brazil
+            </a>
+            , and I work remotely for an outsourcing called
+            <a href="https://www.zartis.com/">Zartis</a> in Spain
+          </p>
+          <p>
+            You can find me at my email
+            <a href="mailto:rhogeranacleto@gmail.com"
+              >rhogeranacleto@gmail.com</a
+            >
+            , my phone number is
+            <a href="tel:+5547996775457">+5547996775457</a>, and my social
+            medias are:
+            <a href="https://www.linkedin.com/in/rhogeranacleto/">Linkedin</a>,
+            <a href="https://www.instagram.com/rhogeranacleto/">Instagram</a>,
+            <a href="https://github.com/rhogeranacleto">Github</a>
+          </p>
+          <p>
+            I speak fluent
+            <span class="bg-slate-200">Portuguese</span> and
+            <span class="bg-slate-200">English</span>. Pero yo ha aprendido un
+            poquito de <span class="bg-slate-200">Español</span>,
+            <span class="bg-slate-200">Français</span> y
+            <span class="bg-slate-200">Deutsch</span>
+          </p>
+          <p>
+            I like
+            <a href="https://www.instagram.com/rhogeranacleto/">photography</a>,
+            listen to all kinds of
+            <a href="https://www.last.fm/pt/user/rhogeranacleto">music</a> (I
+            know some of them are really weird), and playing indie games on xbox
+          </p>
+        </header>
+      </aside>
+      <main class="lg:col-span-6 print:col-span-6 col-span-9">
+        <section>
+          <h1 class="text-xl border-b-purple-100 border-b-2 border-solid mb-8">
+            Professional experience
+          </h1>
 
-<head>
-	<title>Rhoger Anacleto</title>
-	<meta charset="utf-8">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<meta name="description" content="Rhoger Anacleto, young developer personal website" />
-	<meta name="keywords"
-		content="rhoger, anacleto, site, website, desenvolvedor, frontend, backend, brasil, brazil, dev, developer" />
-	<meta name="robots" content="index, follow">
-	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-	<link rel="stylesheet" href="dist/styles/prompt.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-	<!-- <link rel="stylesheet" href="dist/styles/main.css"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet"> -->
-	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42271809-2"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-42271809-2');
-	</script>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-</head>
-
-<body>
-	<div class="prompt" id="prompt">
-		<p class="skip">./activate_rhogeranacleto.sh</p>
-		<p class="ra">Alô?</p>
-		<p class="ra" data-wait="1900">Tem alguém aí?</p>
-		<p class="ra" data-wait="1500">Opa! tudo bem?</p>
-		<p class="ra" data-wait="1000">Eu sou Rhoger!</p>
-		<p class="ra" data-wait="900">Vou mostrar meu site pessoal</p>
-		<p class="ra" data-wait="900">Antes, deixe-me minimizar este terminal...</p>
-		<p class="ra" data-wait="900">Preciso digitar uns comandos de hacker, rsrs</p>
-		<p data-after="1" data-wait="900">minimise</p>
-		<p class="ra" data-wait="1000">Ok, bem melhor!</p>
-		<p class="ra">Vou começar...</p>
-		<p class="ra" data-wait="900">Primeiro vou instalar o site aqui</p>
-		<p>sudo apt-get install portfolio</p>
-		<p data-text-before="Password: " data-wait="1000">*********</p>
-		<p class="skip">Buscando dados...</p>
-		<p class="skip" data-wait="100">Buscando dados...</p>
-		<p class="skip">Buscando dados...</p>
-		<p class="skip" data-wait="400">Buscando dados...</p>
-		<p class="skip" data-after="2">rhogeranacleto.github.io instalado com sucesso!</p>
-		<p class="ra" data-wait="100">HE IS ALIVE!</p>
-		<p class="ra" data-wait="700" data-skip="200">MUAHAHAHA!</p>
-		<p class="ra">Brinks!</p>
-		<p class="ra" data-wait="1000">Consegue ver?</p>
-		<p class="ra" data-wait="700">Está meio feio...</p>
-		<p class="ra">Deixe-me arrumar</p>
-		<p>sudo portfolio install style-colors</p>
-		<p class="skip">Instalando estilo...</p>
-		<p class="skip" data-wait="800" data-after="3">Estilo instaladas com sucesso!</p>
-		<p class="ra">Já está bem melhor</p>
-		<p class="ra">Mas ainda está faltando alguma coisa...</p>
-		<p class="ra">Vou colocar uma fonte melhor</p>
-		<p>sudo portfolio install comic-sans</p>
-		<p class="skip">Instalando comic-sans...</p>
-		<p class="skip" data-wait="800" data-after="4">Comic-sans instaladas com sucesso!</p>
-		<p class="ra">Ops...</p>
-		<p class="ra">Não era para ser essa, hehe</p>
-		<p>sudo portfolio install not-comic-sans-font</p>
-		<p class="skip">Instalando fonte que não é comic sans...</p>
-		<p class="skip" data-wait="800" data-after="5">Fonte que não é comic sans instalada com sucesso!</p>
-		<p class="ra">Perfeito!</p>
-		<p class="ra">Preciso ir agora, muitos sites para montar</p>
-		<p class="ra">Tchaaau :)</p>
-		<p data-wait="3000" data-after="6">close</p>
-		<button class="forward" id="forward">Pular apresentação inicial</button>
-	</div>
-	<main class="hide">
-		<header>
-			<img class="cover" src="https://gravatar.com/avatar/e860f3826544310a2efeee7608416499?s=200" alt="eu">
-			<h1>Meu nome é Anacleto, Rhoger Anacleto</h1>
-			<summary>Desenvolvedor e jovem sonhador</summary>
-			<div class="bg"></div>
-		</header>
-		<div id="content">
-			<div class="bg">
-				<span>M</span>
-			</div>
-			<div class="fill"></div>
-			<div class="column">
-				<div class="column-content">
-				</div>
-			</div>
-			<div class="column">
-				<div class="column-content">
-				</div>
-			</div>
-			<div class="fill"></div>
-		</div>
-	</main>
-	<div id="cards" hidden="true">
-		<div id="card-who-am-i" class="card">
-			<h1>Rhoger Anacleto</h1>
-			<h2>From Wikipedia, the free encyclopedia</h2>
-			<div class="body">
-				<p>
-					<b>Rhoger Floriano Anacleto</b> (
-					<a href="https://pt.wikipedia.org/wiki/Joinville">Joinville</a>
-					<a href="https://pt.wikipedia.org/wiki/25_de_julho">25 de Julho</a> de
-					<a href="https://pt.wikipedia.org/wiki/1996">1996)</a> mais conhecido como
-					<b>Rhoger Anacleto</b>, é um
-					<a href="https://pt.wikipedia.org/wiki/Programador">programador</a>,
-					<a href="https://pt.wikipedia.org/wiki/Aluno">estudante</a> e
-					<a href="https://pt.wikipedia.org/wiki/Autodidata">autodidata</a>
-					<a href="https://pt.wikipedia.org/wiki/Brasileiros">brasileiro</a>. Anacleto iniciou sua carreira
-					pesquisando sobre
-					<a href="https://pt.wikipedia.org/wiki/Programa_Ol%C3%A1_Mundo">Hello Words</a> em
-					<a href="https://pt.wikipedia.org/wiki/JavaScript">Javascript</a> na
-					<a href="https://pt.wikipedia.org/wiki/Internet">internet</a>.
-				</p>
-				<p>
-					Em 2014 iniciou curso de Analise e Desenvolvimento de Sistemas na
-					<a href="https://pt.wikipedia.org/wiki/Universidade_do_Estado_de_Santa_Catarina">UDESC</a> onde
-					continua até hoje. Ele também pensa estudar fotografia e
-					<a href="https://pt.wikipedia.org/wiki/Psicologia">psicologia</a>.
-				</p>
-			</div>
-		</div>
-		<div id="card-contact" class="card">
-			<h1>"I don't know who you are... but I will find you"</h1>
-			<div class="body">
-				<div class="icons-content">
-					<div class="icons">
-						<a target="_blank" href="https://facebook.com/rhogeranacleto">
-							<span>
-								<i class="fab fa-facebook-square"></i>
-							</span>
-						</a>
-						<a target="_blank" href="https://github.com/rhogeranacleto">
-							<span>
-								<i class="fab fa-github"></i>
-							</span>
-						</a>
-						<a target="_blank" href="https://instagram.com/rhogeranacleto">
-							<span>
-								<i class="fab fa-instagram"></i>
-							</span>
-						</a>
-						<a target="_blank" href="https://pinterest.com/rhogeranacleto">
-							<span>
-								<i class="fab fa-pinterest"></i>
-							</span>
-						</a>
-						<a target="_blank" href="https://codepen.io/rhogeranacleto/">
-							<span>
-								<i class="fab fa-codepen"></i>
-							</span>
-						</a>
-						<a target="_blank" href="https://linkedin.com/in/rhogeranacleto/">
-							<span>
-								<i class="fab fa-linkedin"></i>
-							</span>
-						</a>
-					</div>
-					<div>
-						<span>
-							<i class="fas fa-at"></i>
-						</span>
-						<a href="mailto:rhogeranacleto@gmail.com">rhogeranacleto@gmail.com</a>
-					</div>
-					<div>
-						<span>
-							<i class="fas fa-map-marker"></i>
-						</span> Joinville, Brasil.
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="card-languade-xp" class="card">
-			<h1>
-				<span>Habilidades e poderes</span>
-				<i class="fas fa-trophy"></i>
-				<b class="sum-xp"></b>
-			</h1>
-			<div class="body">
-			</div>
-		</div>
-		<!-- <div id="card-instagram" class="card">
-			<img src="" alt="Las post of rhogeranacleto">
-			<div class="caption">
-				<i class="fas fa-quote-right"></i><span></span>
-			</div>
-		</div> -->
-		<div id="card-quick-facts" class="card">
-			<h1>Quick facts</h1>
-			<div class="body">
-				<div class="item">
-					Hobbie
-					<span class="badge">Fotografia</span>
-				</div>
-				<div class="item">
-					Quero viajar para
-					<span class="badge">Islândia</span>
-				</div>
-				<div class="item">
-					Serie do momento
-					<span class="badge">Brooklyn 99</span>
-				</div>
-				<div class="item">
-					Melhor livro
-					<span class="badge">As crônicas de Nárnia</span>
-				</div>
-				<div class="item">
-					Filme favorito
-					<span class="badge">Titanic</span>
-				</div>
-				<div class="item">
-					Uma pessoa
-					<span class="badge">Leonardo da Vinci</span>
-				</div>
-				<div class="item">
-					Outra pessoa
-					<span class="badge">Meryl Streep</span>
-				</div>
-				<div class="item">
-					Música
-					<span class="badge">POP</span>
-				</div>
-				<div class="item">
-					Esporte
-					<span class="badge">Bicicleta</span>
-				</div>
-			</div>
-		</div>
-		<div id="card-options-about-me" class="card">
-			<h1>Rhoger Anacleto, como é que eu posso começar a explicar Rhoger Anacleto?</h1>
-			<div class="body">
-				<div class="quote">O Rhoger Anacleto é perfeito!</div>
-				<div class="quote">Ele tem duas bolsas de pele e um carro importado prateado</div>
-				<div class="quote">O cabelo dele está no seguro por US$10.000,00</div>
-				<div class="quote">Soube que ele faz comerciais de carro… no Japão</div>
-				<div class="quote">O filme que ele gosta mais é Marcação Cerrada</div>
-				<div class="quote">Ele até conheceu o John Stamos no avião… E ele disse que ele era lindo</div>
-				<div class="quote">Um dia, ele me socou no rosto… isso foi irado</div>
-			</div>
-		</div>
-		<div id="card-curriculum" class="card">
-			<h1>Currículo</h1>
-			<div class="body">
-				<p>Se quiseres um currículo para imprimir,
-					<a href="https://rhogeranacleto.github.io/cv/index.html">acesse este link</a> ou
-					<a href="https://rhogeranacleto.github.io/cv/en/index.html">em inglês</a>.
-					<i class="fas fa-hand-spock"></i>
-				</p>
-			</div>
-		</div>
-		<div id="card-about-this-website" class="card">
-			<h1>Sobre</h1>
-			<div class="body">
-				<p>Este site pessoal foi feito com
-					<i class="fas fa-heart"></i> por mim. O código-fonte é público e você pode vê-lo no meu
-					<a href="https://github.com/rhogeranacleto/rhogeranacleto.github.io">perfil do github</a>.</p>
-			</div>
-		</div>
-		<!-- <div id="card-languade-xp" class="card">
-			<h1>Ecleticismo é tudo</h1>
-			<div class="body">
-				<div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&height=400&color=007feb&layout=dark&size=big&type=charts&id=user_138931823&title=Rhoger%20Anacleto&app_id=1" data-scrolling="no"
-				    data-frameborder="0" data-allowTransparency="true" data-width="400" data-height="400"></div>
-			</div>
-		</div> -->
-	</div>
-</body>
-<script src="dist/js/min.js"></script>
-
-<script type="text/html" id="card-languade-xp-template">
-	<div class="content-xp">
-		<summary>{{name}}</summary>
-		<div class="xp-bar {{class}}">
-			<div class="xp-bar-fill" style="width: {{width}}%">{{xp}} XP</div>
-		</div>
-	</div>
-</script>
-
+          <article
+            class="mt-5 border-b-slate-100 border-b-2 border-solid last:border-none break-inside-avoid-page"
+          >
+            <header class="mb-6">
+              <a
+                class="md:text-2xl w-fit text-xl block"
+                href="https://www.zartis.com/"
+              >
+                <h1 class="w-fit">Software Engineer @ Zartis</h1>
+              </a>
+              <sub> since June 2021 in Spain / Remote </sub>
+            </header>
+            <main>
+              <p>
+                At Zartis, I have been engaged in two pivotal projects, wherein
+                I serve as a Frontend Engineer.
+              </p>
+              <p>
+                The former project catered to a prestigious client,
+                <a href="https://605.tv/">605</a>, wherein I was entrusted with
+                key responsibilities such as preserving the application
+                interface, incorporating novel features, and debugging.
+              </p>
+              <p>
+                My current project involves a renowned client named
+                <a href="https://www.difc.ae/">DIFC</a>, wherein I assumed the
+                role of an architect. As an architect, I am responsible for
+                spearheading the frontend architecture, assimilating best design
+                practices and optimizing product-side feature development.
+              </p>
+            </main>
+            <footer class="flex gap-3 my-5 md:flex-nowrap flex-wrap">
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                typescript
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                react
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                tailwindcss
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                jest
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                .Net
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                playwright
+              </code>
+            </footer>
+          </article>
+          <article
+            class="mt-5 border-b-slate-100 border-b-2 border-solid last:border-none break-inside-avoid-page"
+          >
+            <header class="mb-6">
+              <a
+                class="md:text-2xl w-fit text-xl block"
+                href="https://magrathealabs.com/"
+              >
+                <h1 class="w-fit">Software Engineer @ Magrathea</h1>
+              </a>
+              <sub> between March 2019 and June 2021 in Joinville, Brazil </sub>
+            </header>
+            <main>
+              <p>
+                During my time at Magrathea, I had the opportunity to work on
+                various projects as a Software Engineer, where I contributed to
+                product implementation and worked on both the frontend and
+                backend aspects.
+              </p>
+              <p>
+                One notable project I worked on was for
+                <a
+                  href="https://www.rdstation.com/?utm_source=search&utm_medium=cpc&utm_campaign=BR-INB-MULTIPRODUCT-SEARCH-INST-RD_STATION_ONLY_EXACT&utm_content=rd-station_only&utm_term=rd%20station-e&gclid=CjwKCAjwrpOiBhBVEiwA_473dKk33P74GBGwvMXAVEX0fUFFq2iJneP_My6b8yl5wX8qB6hMzCN73RoCD-gQAvD_BwE"
+                >
+                  RDStation
+                </a>
+                's compliance team, where I implemented the
+                <a href="https://securiti.ai/what-is-lgpd/">LGPD</a> laws on
+                their application. It was a challenging and fulfilling
+                experience to collaborate with other product teams within a
+                strict timeline.
+              </p>
+              <p>
+                Another project I led was Daleponto, which started as an
+                internal solution but later grew into a product that other
+                companies were interested in. As the head leader of a small
+                team, I managed the product as an independent entity.
+              </p>
+              <p>
+                Furthermore, I was also part of the recruitment team responsible
+                for conducting candidate interviews.
+              </p>
+            </main>
+            <footer class="flex gap-3 my-5 md:flex-nowrap flex-wrap">
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                typescript
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                react
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                vue
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                ruby
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                python
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                nodejs
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                mongodb
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                sql
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                NestJS
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                Cypress
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                Circle CI
+              </code>
+            </footer>
+          </article>
+          <article
+            class="mt-5 border-b-slate-100 border-b-2 border-solid last:border-none break-inside-avoid-page"
+          >
+            <header class="mb-6">
+              <a
+                class="md:text-2xl w-fit text-xl block"
+                href="https://www.sofit4.com.br/"
+              >
+                <h1 class="w-fit">Software Engineer @ Sofit</h1>
+              </a>
+              <sub>
+                between August 2016 and March 2019 in Joinville, Brazil
+              </sub>
+            </header>
+            <main>
+              <p>
+                During my tenure at Sofit, my responsibilities spanned across
+                three main areas. Initially, I joined as a FullStack Engineer
+                and focused on enhancing the main product by implementing new
+                features and fixing general bugs.
+              </p>
+              <p>
+                Subsequently, I transitioned to maintaining a mobile app for
+                several months, where I was in charge of ensuring its smooth
+                operation, publishing it on stores, and taking care of product
+                implementation.
+              </p>
+              <p>
+                My final accomplishment at Sofit was leading a team responsible
+                for rewriting the primary API using new technologies. I played a
+                crucial role in designing the API architecture, establishing
+                standards and patterns, and guiding my colleagues in navigating
+                the new source code.
+              </p>
+            </main>
+            <footer class="flex gap-3 my-5 md:flex-nowrap flex-wrap">
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                typescript
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                nodejs
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                react-native
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                emberjs
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                NestJS
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                postgresql
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                mongodb
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                Circle CI
+              </code>
+            </footer>
+          </article>
+          <article
+            class="mt-5 border-b-slate-100 border-b-2 border-solid last:border-none break-inside-avoid-page"
+          >
+            <header class="mb-6">
+              <a
+                class="md:text-2xl w-fit text-xl block"
+                href="https://softin.com.br/"
+              >
+                <h1 class="w-fit">Software Engineer @ Softin Sistemas</h1>
+              </a>
+              <sub>
+                between February 2014 and August 2016 in Joinville, Brazil
+              </sub>
+            </header>
+            <main>
+              <p>
+                During my time at this company, I served as a skilled Frontend
+                Engineer with a focus on implementing key product features and
+                resolving issues. Additionally, I played an instrumental role in
+                the creation of a new brand, contributing to the brand's design
+                and successfully bringing it to fruition. This experience proved
+                particularly formative, as it represented my first foray into
+                the professional world of technology, and provided ample
+                opportunities for me to hone my skills and expand my knowledge
+                base.
+              </p>
+            </main>
+            <footer class="flex gap-3 my-5 md:flex-nowrap flex-wrap">
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                javascript
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                jquery
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                css
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                html
+              </code>
+              <code class="bg-slate-200 flex items-center whitespace-nowrap">
+                angularjs
+              </code>
+            </footer>
+          </article>
+        </section>
+        <section class="break-inside-avoid-page">
+          <h1 class="text-xl my-10 border-b-purple-100 border-b-2 border-solid">
+            Education
+          </h1>
+          <article class="mt-6">
+            <a
+              class="md:text-2xl text-xl w-fit block"
+              href="https://www.udesc.br/international"
+            >
+              <h1 class="mb-5 w-fit">
+                Bachalor in System Analisys and Development @ UDESC
+              </h1>
+            </a>
+            <p>
+              This graduation was on
+              <a href="https://www.udesc.br/international">
+                University of State of Santa Catarina
+              </a>
+              starting on February 2014 and graduating on August 2018, lasting 4
+              years in Joinville, Brazil
+            </p>
+          </article>
+          <article class="mt-6">
+            <a
+              class="md:text-2xl text-xl w-fit block"
+              href="https://sc.senai.br/"
+            >
+              <h1 class="mb-5 w-fit">Computer Technician @ SENAI</h1>
+            </a>
+            <p>
+              This graduation was on
+              <a href="https://sc.senai.br/">
+                National School of Industrial Learning
+              </a>
+              starting on February 2012 and graduating on December 2013, lasting
+              2 years in Joinville, Brazil
+            </p>
+          </article>
+        </section>
+        <section>
+          <h1 class="text-xl my-10 border-b-purple-100 border-b-2 border-solid">
+            My skills
+          </h1>
+          <article class="mt-6 grid grid-cols-2 gap-10">
+            <h1 class="text-lg print:text-base w-fit">
+              I can <span class="bg-purple-200">work</span> and
+              <span class="bg-purple-200">help</span> other people with
+            </h1>
+            <p class="flex gap-3 flex-wrap text-xs items-baseline">
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >typescript</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >javascript</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >react</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >html</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >css</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >unit tests</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >e2e tests</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Cypress</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >NestJS</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Photoshop</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >SQL</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >MongoDB</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Shell</code
+              >
+            </p>
+            <div
+              class="col-span-2 border-b-slate-100 border-b-2 border-solid w-3/4 mx-auto"
+            ></div>
+            <h1 class="text-lg print:text-base w-fit">
+              With a <span class="bg-purple-200">little help</span> I can work
+              with
+            </h1>
+            <p class="flex gap-3 flex-wrap text-xs items-baseline">
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >VueJS</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Angular</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Ruby</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Python</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >.Net</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >C#</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >DevOps</code
+              >
+              <code
+                key="{tech}"
+                class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Redis</code
+              >
+            </p>
+            <div
+              class="col-span-2 border-b-slate-100 border-b-2 border-solid w-3/4 mx-auto"
+            ></div>
+            <h1 class="mb-5 text-lg print:text-base w-fit">
+              I am <span class="bg-purple-200">interested</span> in and want to
+              have an opportunity to
+              <span class="bg-purple-200">learn</span> and work with
+            </h1>
+            <p class="flex gap-3 flex-wrap text-xs items-baseline">
+              <code class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Game Development (Unity)</code
+              >
+              <code class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Microsservices</code
+              >
+              <code class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Golang</code
+              >
+              <code class="bg-slate-200 flex items-center whitespace-nowrap"
+                >Machine Learning / A.I.</code
+              >
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
