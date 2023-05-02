@@ -17,7 +17,10 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-x-hidden bg-neutral-50 print:bg-white;
+  @apply overflow-x-hidden bg-stone-50 print:bg-white;
+  -webkit-print-color-adjust: exact !important; /* Chrome, Safari 6 – 15.3, Edge */
+  color-adjust: exact !important; /* Firefox 48 – 96 */
+  print-color-adjust: exact !important;
 }
 
 a {
@@ -26,10 +29,19 @@ a {
 
 a::after {
   content: '';
-  @apply bg-purple-200 w-full h-full absolute top-[4px] left-[4px] -z-10;
+  @apply bg-purple-200 w-full h-full absolute top-[0.15em] left-[0.14em] -z-10;
 }
 
 article > main > p,
 aside > header > p {
   @apply my-3;
+}
+
+mark {
+  @apply bg-transparent relative;
+}
+
+mark::after {
+  content: '';
+  @apply bg-emerald-100 w-full h-full absolute top-[-0.06em] left-[-0.12em] -z-10;
 }
