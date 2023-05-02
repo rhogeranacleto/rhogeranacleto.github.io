@@ -594,10 +594,6 @@ video {
   display: grid;
 }
 
-.hidden {
-  display: none;
-}
-
 .w-3\/4 {
   width: 75%;
 }
